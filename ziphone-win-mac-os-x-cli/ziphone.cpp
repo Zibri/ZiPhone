@@ -219,7 +219,7 @@ void Stage2(struct am_recovery_device *rdev) { // Booting in recovery mode
   }
 
   if (verbose) {
-    vebose=true;
+    verbose=true;
     unlock=false;
     jailbreak=false;
     activate=false;
