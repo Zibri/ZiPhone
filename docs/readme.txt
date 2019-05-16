@@ -8,8 +8,20 @@
 ░ ░ ░ ░ ░ ▒ ░░░        ░  ░░ ░░ ░ ░ ▒     ░   ░ ░    ░   
   ░ ░     ░            ░  ░  ░    ░ ░           ░    ░  ░
 ░                                                        
+ZiPhone version 3.4a (16th of May 2019)
+===================================================================================
+
+-Replaced the ramdisk BSD Subsystem with moden utilities I compiled such as Bash 
+version 4.4.
+-Made the ramdisk smarter so it only does things when it makes sense and is much 
+faster overall.
+-Debug boot (ziphone -v) from the original ZiPhone versions is back.
+-Unlock upgraded, ziphone -u will now unlock any 1.1.4 iPhone, or any 1.1.2 iPhone 
+with bootloader 4.6.
+
 Ziphone version 3.4 (14th of May 2019)
 =================================================================================== 
+
 ZiPhone Windows is back.
 ZiPhone Mac OS X has a new kill iTunes method that works correctly, replacing the 
 older one that could sometimes fail and cause ZiPhone to hang.
@@ -24,6 +36,7 @@ Improved ramdisk and Mac GUI.
 Localization fixed for Mac GUI.
 ziphone -b now flashes 1.1.4 baseband, since there would otherwise be no
 baseband.
+
 Ziphone version 3.3 (31st of March 2019)
 ===================================================================================  
 
