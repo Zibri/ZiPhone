@@ -1,0 +1,199 @@
+Troubleshooting ZiPhone
+  Or:
+IT BROKE WHAT DO I DO?!?!??!?!?!?!?!?!
+
+===================================================================================
+
+ZiPhone has worked reliably for many iPhone users, but occasionally things do go 
+wrong.  Below are some problems that some users have encountered.  Please try to 
+work through these troubleshooting steps before you come into the IRC channels asking 
+for help.  Please keep in mind that there are far more ZiPhone users than there are 
+ZiPhone developers.  The more users who can help themselves using the information 
+below, the more time the developers have to add new features and fix the occasional 
+bug.
+
+===================================================================================
+
+I) Other Jailbreaks
+
+The most common source of problems is running ZiPhone after using other 1.1.3 
+jailbreak solutions.  The best case is to run ZiPhone on a cleanly restored 1.1.3 
+phone.  Other configurations that are known to work include starting with a 
+jailbreakme.com 1.1.1 phone or oktoprep 1.1.2, possibly then updated to 1.1.3
+using iTunes.
+
+It you start with a "Nate" or "Official Dev Team" jailbreak of 1.1.3, it's important
+that you tell iTunes to treat the phone as a NEW phone.  That is, do not restore 
+your existing phone's settings and configuration to the ZiPhone jailbroken phone.  
+Restoring settings from other jailbreaks is *known* to cause problems.
+
+If your phone is behaving badly after two different 1.1.3 jailbreaks, your best bet 
+is to restore to a clean 1.1.3 install with iTunes and then run ZiPhone.  Clicking 
+the Restore button in iTunes should get you started.  When prompted about backing up 
+settings, choose "Do Not Backup".  You WILL lose your settings on your phone, but any 
+contacts or other data synced to your PC will be synced back when your restore is 
+complete.
+
+===================================================================================
+
+II) Errors running ZiPhone
+
+ZiPhone may display an error message and fail to run, or it may hang at the 
+"waiting for phone" steps.  If this happens, you should try the following:
+
+  1) Make sure iTunes is shut down.
+  2) Make sure iTunesHelper and any other services or daemons releated to iTunes 
+    are not running.
+  3) Try putting your phone into recovery mode manually (see below).
+  4) Upgrade to iTunes 7.6 and sync your phone with iTunes before trying ZiPhone.
+  5) Reboot your computer.
+  6) If possible, try another computer.
+  
+  To enter recovery mode manually:
+  
+  1) Quit iTunes and close any "helper" daemons.
+  2) Hold the power button on your phone until the "slide to power off" message appears.
+  3) Slide to power off and wait for the screen to go completely black.
+  4) Unplug your phone from the cable or dock.
+  5) Hold the HOME button on the phone and reconnect it to the cable or dock.
+  6) Continue holding HOME while the Apple logo appears.
+  7) Continue holding HOME until the "Connect to iTunes" graphic appears.
+  8) Release HOME.  You're now in "Recovery" mode (not to be confused with DFU mode).
+  9) Try running ZiPhone again.
+  
+Previous versions of iTunes were known to crash on PPC Macs or on Mac OS X 10.4 
+(Tiger).  As of version 2.3 all known issues are fixed, and ZiPhone should work 
+on Intel or PPC Macs running 10.4 or 10.5.  Please make sure you're using at least 
+version 2.3 before reporting errors on Tiger or PPC Macs.
+
+===================================================================================
+
+III) Problems After Jailbreak
+
+After successfully completing a jailbreak, you may notice some of the 
+following issues:
+
+ * YouTube not available
+ * No cell access (phone and/or SMS don't work)
+
+Most of these issues can be fixed by running one or both of the Reset Settings 
+options in the phone's settings application.
+
+ 1) Tap on Settings from the home screen.
+ 2) Choose General
+ 3) Choose Reset (all the way on the bottom)
+ 4) First try "Reset Network Settings"
+ 
+ The phone will reboot.  If things still aren't working, go back and try 
+ "Reset All Settings".
+ 
+  * Visual Voicemail doesn't work (official carriers only)
+ 
+ To fix Visual Voice mail, launch the Phone application and click Voicemail.  It 
+ will probably try to call into the voicemail phone number.  If it doesn't tap 
+ the button to make it call.  Let the call complete and check your voicemail.  
+ End the call, wait a minute or two, then try visual voicemail again.  You should
+ be prompted to enter your voicemaill password and Visual Voicemail will work after
+ that.  Some have had luck by changing their password during the phone call or 
+ rebooting afterwards.  Of course, Visual Voicemail ONLY works with official
+ iPhone carriers, so if you're using an unlocked phone with another SIM, this
+ won't work no matter what you do.
+
+===================================================================================
+
+IV) Starting Over
+
+If none of the above helped, it may be necessary to restore your phone to a 
+completely clean state before trying again.  To do this, perform a 
+"DFU Restore" as follows:
+
+  A) The Easy Way:
+    1) Shutdown iTunes and connect the phone.
+    2) Run ziphone -D
+    3) Your phone will show the "Connect to iTunes" screen.
+    4) iTunes should be able to restore 1.1.3 firmware to your phone.
+    
+    Note that this isn't "full" hardware DFU mode, but it should be adequate 
+    to install a current firmware with iTunes.
+    
+    If you enter this mode by mistake, ziphone -t should reboot normally.
+  
+  B) Full Hardware DFU (required for downgrades):
+    Note that using a cable instead of the dock may make it easier to press 
+    buttons in the following steps without losing the connection.
+  
+    1) Start iTunes and plug the phone in.  
+    2) With the phone powered on, hold both the POWER and HOME buttons for 
+      seven seconds. The screen should turn black.
+    3) Wait two seconds while the screen is black and release the POWER button 
+      while still holding the HOME button.
+    4) The screen will remain black, but after a few more seconds iTunes will 
+      detect the phone in recovery mode.
+    5) Release the HOME button and proceed to restore firmware with iTunes.
+    
+    Timing is fairly important on this.  If your phone reboots or ends up in 
+    recovery mode, just try again.  You might want to look at a clock that shows 
+    seconds while you do this.  The timing needs to be exact for it to work.
+    
+    If you enter this mode by mistake, hold the HOME and POWER buttons for 
+    seven seconds until you see the Apple logo and immediately release both 
+    buttons.  The phone should reboot normally, assuming a valid firmware image 
+    is present on the phone.
+    
+===================================================================================
+
+V) Asking For Help (the right way)
+
+If none of the above works, you may need to come into the ZiPhone IRC channels and 
+ask for help.  Before you do that, there are a few things you should do:
+
+First of all, take a deep breath and CALM DOWN.  The odds of ZiPhone doing 
+permanent damage to your phone are relatively low.  The one option that is known to 
+potentially damage phones is the downgrade baseband option (-b) which is NOT enabled 
+by default.  Assuming you were just doing a standard jailbreak, activation, or unlock, 
+your phone is probably okay.
+
+Before you continue, you should preserve any error messages that might have appeared
+on the computer or your phone.  If you ask for assistance on the IRC channels, that 
+information will be required in order to be of any help to you.  If you burst into 
+the channel with something like:
+  
+  OMG!!! My phon broke! what do i do??????
+
+Expect to be ignored.  No offense, but the IRC channels get a lot of traffic.  There 
+are far more people asking for help than there are ZiPhone developers to help them.  
+If you come to the channels, please be respectful, be calm, and wait your turn for 
+someone to help you.  When you ask for help, be prepared to give any error messages or 
+other output from when you ran ZiPhone.  Describe clearly what symptoms you're seeing on 
+your phone and how those differ from what you expected to see.  Also be ready to give the 
+type and versions of your computer, operating system, iTunes, phone, and ZiPhone.  You 
+may be asked both which firmware version you were running before you started and which 
+version your phone came with when you bought it.  It's also especially important to tell 
+if you have used any other 1.1.3 jailbreak solutions on the phone such as "Nate's Jailbreak" 
+or the "Official Dev Team Jailbreak".  Whether your phone syncs with iTunes on the computer 
+you're jailbreaking from also makes a difference.
+
+It may be helpful to see this essay on good bug report preparation:
+http://www.chiark.greenend.org.uk/~sgtatham/bugs.html
+
+The following is an example of a complete and helpful bug report:
+
+		I tried to run ZiPhone 2.4 on a 1.0.2 OOB (Out of Box) iPhone.  It was running 
+		firmware 1.1.3 when I started and had been soft-updated using Nate's jailbreak.  
+		I used the ZiPhone GUI on Mac OS X 10.5.2 (Intel) with iTunes 7.6 installed.  
+		My phone is setup to sync with iTunes on this computer.  When I ran ZiPhone, it 
+		gave the follow output:
+
+				ZiPhone v2.3 by Zibri. http://www.ziphone.org
+				Source code available at: http://www.iphone-elite.org
+
+				Loading zibri.dat.
+				i386
+				Searching for iPhone...
+
+		Then it just hung there with the phone showing the "connect to iTunes" graphic.
+		
+The preceding example gives plenty of information to anyone who might be helping you.  
+It's far easier to trouble shoot than, "It broke what do i do???".
+
+Help for ZiPhone is available on irc.iphone-elite.org in #ziphone.

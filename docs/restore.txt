@@ -1,0 +1,23 @@
+Downgrading to OS X 1.0-2.0 beta 3 on the original iPhone or iPod Touch:
+
+You need to install iTunes v7.5, run http://whitera1n.com/ituneseraser for Windows or Mac OS X. iTunes v7.5 can also be downloaded from that page. iTunes Eraser does a full uninstall of iTunes so you can install iTunes v7.5.
+
+iTunes v7.5 is special. It's the last version of iTunes that doesn't require talking to Apple's 
+servers for restoring and updating devices. It supports restoring/updating OS X 1.0-2.0 beta 3 on the original iPhone and iPod Touch. Once you have the correct iTunes compatible with your desired OS X version, you'll need to restore to the desired 
+firmware. To do so, first enter DFU mode:
+
+-Turn off the iPhone or iPod Touch.
+-Press the power button for 3 seconds.
+-Keep pressing the power button, but also press the home button, for a total of 10 seconds.
+-Let go of the power button, but keep holding the home button, for 15 more seconds.
+
+You'll know if it worked if the screen of the iPhone or iPod Touch is black, but not off. Connect 
+the iPhone or iPod Touch with a USB Dock cable to the Mac or Windows computer, and open iTunes. 
+	Click ok when prompted by iTunes that your iPhone or iPod Touch is in DFU mode. Then place the 
+mouse cursor on the restore button. Press down the shift key (on Windows) or the option key 
+(on Mac OS X) and click. A new window will open, select your device's 1.0-1.1.5 or 2.0 beta 3 IPSW 
+file, and wait for the restore to complete. 
+	If your downgrading an iPhone from OS X 2.0 beta 2-iPhone OS 3.1.3 to OS X 1.0-1.1.4, you might need to restore twice or it may not boot out of Recovery Mode after the first restore otherwise. Repeat the restore procedure a second time after the first completes. After the second restore completes, your done. If you get an error 1012, 1013, or 1015 you need to  Exit Recovery Mode manually with a utility that supports doing so.
+
+--Note--
+	On some operating systems, iTunes will display a message to update to iTunes version 10 or greater when an iPod Touch that is not hactivated and is connected.If your turn off / disable internet to your computer, close iTunes and then open it again, this message will not been shown and you can sync your iPod Touch. This can be fixed by hactivating.

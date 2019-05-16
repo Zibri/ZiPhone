@@ -1,0 +1,41 @@
+--Generate zibri.dat first!--
+
+Before building any ZiPhone version, you must generate zibri.dat from zibri.dmg. To do 
+so:
+
+-Open either Terminal.app or a something with a shell.
+-Cd into the "buildscripts" directory.
+-Execute the command "./ramdisklinux.sh" if your on Linux or 
+"./amdiskmac.sh" if your on Mac OS X.
+
+--Build ZiPhone CLI on Mac OS X--
+
+-Requires Mac OS X 10.4-10.8.
+-Requires Xcode v2.5-3.0 installed. These Xcode versions will usually fail to install on newer Mac OS X, such as 10.8. The workaround is to simply turn off all internet to your Mac, set the system date and time to 2011, and then run the installer. This time it will not fail and will install fine. Then you should turn back on internet, set the correct system time, and reboot. 
+
+-Open Terminal.app.
+-Cd into "buildscripts" directory.
+-Execute the command "./maccli.sh".
+
+
+--Build ZiPhone Linux CLI--
+
+Install all required packages to build ZiPhone on Linux. Execute the command: 
+"apt-get install build-essential libusb-dev".
+
+-Open the Terminal app.
+-Cd into the "build scripts" directory.
+-Execute the command "./linuxcli.sh".
+
+--Build ZiPhone GUI on Mac OS X--
+
+-Requires Mac OS X 10.4-10.8.
+-Requires Xcode v3.0 installed. Xcode v3.0 will usually fail to install on newer Mac OS X, such as 10.8. The workaround is to simply turn off all internet to your Mac, set the system date and time to 2011, and then run the installer. This time it will not fail and will install fine. Then you should turn back on internet, set the correct system time, and reboot. 
+
+-Open Terminal.app.
+-Cd into trunk directory.
+-Execute the command "./macgui.sh".
+
+--Build ZiPhone Windows CLI--
+
+Windows XP is required to build ZiPhone Windows. Windows Vista and newer broke the compiler Zibri originally used. Before building, you need Dev-CPP version 4.9.2.2 and the Quicktime v7.3 sdk installed on your Windows XP computer. They can be downloaded from http://whitera1n.com/ziphone. Once those are installed, start Dev-CPP, open "ziphone-win-mac-os-x-cli/Makefile.win", and build. Then run cmd.exe, cd into the "buildscripts" directory, and execute "windowscli.bat" to build the final release.

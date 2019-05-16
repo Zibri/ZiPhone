@@ -1,0 +1,28 @@
+Compatible Windows versions: Windows XP SP2 32 bit-Windows 10 32 bit. 
+
+Compatible Mac OS X versions: Mac OS X 10.4.10 Tiger-Mac OS X 10.8.5 Mountain Lion. Untested on newer versions.
+
+Compatible Linux versions: All x86/x86_64 distributions with Lib-usb version 1.0 or newer installed.
+
+--Windows CLI Traditional--
+-Open cmd.exe.
+-Cd into the ZiPhone executable directory.
+-Execute "ziphone"
+
+--Windows CLI Automatic--
+-Open the ZiPhone executable directory in Windows Explorer.
+-Double click one of the .bat files.
+
+--Mac OS X CLI--
+-Open /Applications/Utilities/Terminal.app.
+-Cd into the ZiPhone executable directory.
+-Execute "./ziphone"
+
+--Mac OS X GUI--
+-Double click ZiPhone.app.
+
+--Linux CLI--
+-Open your Terminal program.
+-Cd into the Ziphone directory.
+-As the root user, execute "./ziphone"
+

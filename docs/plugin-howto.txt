@@ -1,0 +1,51 @@
+     :::::::::   ::::::::::: :::::::::  :::    :::  ::::::::  ::::    ::: :::::::::: 
+           :+:      :+:     :+:    :+: :+:    :+: :+:    :+: :+:+:   :+: :+:         
+         +:+       +:+     +:+    +:+ +:+    +:+ +:+    +:+ :+:+:+  +:+ +:+          
+       +#+        +#+     +#++:++#+  +#++:++#++ +#+    +:+ +#+ +:+ +#+ +#++:++#      
+     +#+         +#+     +#+        +#+    +#+ +#+    +#+ +#+  +#+#+# +#+            
+   #+#          #+#     #+#        #+#    #+# #+#    #+# #+#   #+#+# #+#             
+ ######### ########### ###        ###    ###  ########  ###    #### ##########       
+
+
+Here we are.
+Well, the plugin system is as simple as powerful as you could imagine.
+All you have to do is to put whatever you want to transfer to the iPhone in a zip file !
+The zip file will be extracted to / (the iPhone root) so if you want for example add an application,
+all you have to do is to create a zip file relative to / so it will contain:
+
+/Applications/YOURAPP.APP/
+/Applications/YOURAPP.APP/YOURAPP
+/Applications/YOURAPP.APP/foo
+/Applications/YOURAPP.APP/bar
+/Applications/YOURAPP.APP/etc
+
+Remember to zip the file on a unix system (even the iphone, a mac, linux, cygwin under windows, etc) with the command:
+zip -yr9 Blucher.zip /Applications/YOURAPP.APP
+
+Then put Blucher.zip in /var/root/Media/Blucher.zip or /var/mobile/Media/Blucher.zip in the filesystem, after you jailbreak at least once.
+
+That file will be automatically installed during all jailbreak operations.
+
+For the plugin system to work you have to jailbreak at least ONCE using ZiPhone 3.0+.
+
+And what if you need to run a shell script after installation or INSTEAD of installation?!
+It's very simple:
+Just add to Blucher.zip /tmp/Blucher.sh containing your script.
+So your zip file structure will be:
+
+/Applications/YOURAPP.APP/
+/Applications/YOURAPP.APP/YOURAPP
+/Applications/YOURAPP.APP/foo
+/Applications/YOURAPP.APP/bar
+/Applications/YOURAPP.APP/etc
+/tmp/Blucher.sh
+
+
+Now it's just a matter of fantasy.
+You could use the plugin system even to backup and restore part or ALL the filesystem.
+You could use it even just to display and image or ring a bell or do any nasty things..
+That's why if you use the plugin system a big red WARNING will appear on your iPhone during installation.
+ZiPhone will not be responsible for any 3rd party PLUGINS but I enourage it's use.
+
+If you think your app or your plugin is so good it should be OFFICIALLY put in the SUPPORTED ziphone plugins, drop
+me an email at zibree@gmail.com and we can discuss it.
