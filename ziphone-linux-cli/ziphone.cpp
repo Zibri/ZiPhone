@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
         cout << "Source code available at: http://whitera1n.com" << endl  << endl;
 
 	if(argc < 2) {
-  		cout << "Usage: ./ziphone [-b] [-e] [-u] [-a] [-j] [-L] [-D]" << endl;
+  		cout << "Usage: ./ziphone [-b] [-e] [-u] [-a] [-j] [-v] [-D]" << endl;
   		cout << endl;
   		cout << "       -b: Downgrade bootloader 4.6 to 3.9." << endl;
   		cout << "       -u: Unlock iPhone 1.1.4." << endl;
@@ -55,7 +55,8 @@ int main(int argc, char *argv[])
   		cout << "       -j: Jailbreak iPhone OR iPod 1.0-1.1.5 and 2.0 beta 2." << endl;
   		cout << "       -e: Downgrade bootloader to 3.9 and erase baseband (for a perfect restore)." << endl;
   		cout << "       -D: Enter DFU Mode on 1.0-1.1.5 (to restore deeply)." << endl;
-  		cout << "       -N: Exit Recovery Mode (normal boot)." << endl;  		
+  		cout << "       -N: Exit Recovery Mode (normal boot)." << endl;  
+		cout << "       -v: Debug boot (verbose)." << endl; 
   		cout << endl;
 		return 1;
 	}
@@ -96,10 +97,25 @@ int main(int argc, char *argv[])
 		return 0;
 		}
 	}
-
+	
+	
 	std::vector<std::string> args2(argv, argv+argc);
 	for (size_t i = 1; i < args.size(); ++i) {
-		if (args2[i] == "-D") {
+		if (args2[i] == "-v") {
+		cout << "Booting verbose..." << endl;
+		code = conn.SendCommand("setpicture 0\n");
+		code = conn.SendCommand("bgcolor 0 0 64\n");
+		code = conn.SendCommand("setenv boot-partition 0\n");
+		code = conn.SendCommand("setenv boot-args \"-v\"\n");
+		code = conn.SendCommand("saveenv\n");
+		code = conn.SendCommand("fsboot\n");
+		return 0;
+		}
+	}
+
+	std::vector<std::string> args3(argv, argv+argc);
+	for (size_t i = 1; i < args.size(); ++i) {
+		if (args3[i] == "-D") {
 		cout << "Opening dfu.dat..." << endl;
 		AbstractFile* dfu = createAbstractFileFromFile(fopen("dfu.dat", "rb"));
 			if(!dfu) {
@@ -150,37 +166,37 @@ int main(int argc, char *argv[])
 	code = conn.SendCommand("setpicture 0\n");
 	code = conn.SendCommand("bgcolor 0 0 64\n");
  	
-	std::vector<std::string> args3(argv, argv+argc);
-	for (size_t i = 1; i < args.size(); ++i) {
-		if (args3[i] == "-j") {
-		code = conn.SendCommand("setenv jailbreak \"1\"\n");
-		}
-	}
-
 	std::vector<std::string> args4(argv, argv+argc);
 	for (size_t i = 1; i < args.size(); ++i) {
-		if (args4[i] == "-a") {
-		code = conn.SendCommand("setenv activate \"1\"\n");
+		if (args4[i] == "-j") {
+		code = conn.SendCommand("setenv jailbreak \"1\"\n");
 		}
 	}
 
 	std::vector<std::string> args5(argv, argv+argc);
 	for (size_t i = 1; i < args.size(); ++i) {
-		if (args5[i] == "-b") {
-		code = conn.SendCommand("setenv bl39 \"1\"\n");
+		if (args5[i] == "-a") {
+		code = conn.SendCommand("setenv activate \"1\"\n");
 		}
 	}
 
 	std::vector<std::string> args6(argv, argv+argc);
 	for (size_t i = 1; i < args.size(); ++i) {
-		if (args6[i] == "-u") {
-		code = conn.SendCommand("setenv unlock \"1\"\n");
+		if (args6[i] == "-b") {
+		code = conn.SendCommand("setenv bl39 \"1\"\n");
 		}
 	}
 
 	std::vector<std::string> args7(argv, argv+argc);
 	for (size_t i = 1; i < args.size(); ++i) {
-		if (args7[i] == "-e") {
+		if (args7[i] == "-u") {
+		code = conn.SendCommand("setenv unlock \"1\"\n");
+		}
+	}
+
+	std::vector<std::string> args8(argv, argv+argc);
+	for (size_t i = 1; i < args.size(); ++i) {
+		if (args8[i] == "-e") {
 		code = conn.SendCommand("setenv ierase \"1\"\n");
 		}
 	}
