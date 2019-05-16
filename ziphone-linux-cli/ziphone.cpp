@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	cout << "ZZZZZZZZZZZZ              ZZZZZZZZZZZZ" << endl; 
 	cout << "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" << endl << endl;
 
-        cout << "ZiPhone v3.4 by Zibri. https://ziphone.zibri.org" << endl;
+        cout << "ZiPhone v3.4a by Zibri. https://ziphone.zibri.org" << endl;
         cout << "Source code available at: http://whitera1n.com" << endl  << endl;
 
 	if(argc < 2) {
