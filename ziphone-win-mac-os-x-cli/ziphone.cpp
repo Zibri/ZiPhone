@@ -294,7 +294,7 @@ void Stage2(struct am_recovery_device *rdev) { // Booting in recovery mode
 	 
 	
     sendCommandToDevice(rdev, CFStringCreateWithCString(kCFAllocatorDefault,
-		"setenv boot-parition 0", kCFStringEncodingUTF8))
+		"setenv boot-parition 0", kCFStringEncodingUTF8));
   }
 
     sendCommandToDevice(rdev, CFStringCreateWithCString(kCFAllocatorDefault, "saveenv", kCFStringEncodingUTF8));
@@ -498,7 +498,7 @@ void UsageAdvanced() {
   cout << "Usage: ziphone [-b] [-e] [-u] [-a] [-j] [-R] [-D] [-v] [-i imei]" << endl;
   cout << endl;
   cout << "       -b: Downgrade iPhone bootloader 4.6 to 3.9." << endl;
-  cout << "       -u: Unlock iPhone 1.1.4." << endl;
+  cout << "       -u: Unlock any iPhone on 1.1.4, or an iPhone on 1.1.2 with bootloader 4.6." << endl;
   cout << "       -a: Activate iPhone." << endl;
   cout << "       -j: Jailbreak iPhone OR iPod 1.0-1.1.5 and 2.0 beta 2." << endl;
   cout << "       -i: Change imei." << endl;
@@ -530,6 +530,8 @@ bool parse_args(int argc, char *argv[]) {
         }
       } else if (argv[i][1]=='N') {
         normalmode=true;
+      } else if (argv[i][1]=='v') {
+        verbose=true;
       } else if (argv[i][1]=='R') {
         recover=true;
       } else if (argv[i][1]=='v') {
