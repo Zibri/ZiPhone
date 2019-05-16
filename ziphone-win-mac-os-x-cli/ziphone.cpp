@@ -45,7 +45,7 @@ bool debug=false;
 bool dfu=false;
 bool recover=false;
 bool normalmode=false;
-bool zrestore=false;
+bool verbose=false;
 
 char imei[127]="setenv imei ";
 
@@ -218,6 +218,16 @@ void Stage2(struct am_recovery_device *rdev) { // Booting in recovery mode
     bl39=false;
   }
 
+  if (verbose) {
+    vebose=true;
+    unlock=false;
+    jailbreak=false;
+    activate=false;
+    chimei=false;
+    ierase=false;
+    bl39=false;
+  }
+	
   if (normalmode) {
     unlock=false;
     jailbreak=false;
@@ -226,6 +236,7 @@ void Stage2(struct am_recovery_device *rdev) { // Booting in recovery mode
     ierase=false;
     bl39=false;
     dfu=false;
+    verbose=false;
   }
 
   sendCommandToDevice(rdev, CFStringCreateWithCString(kCFAllocatorDefault, "setenv auto-boot true", kCFStringEncodingUTF8));
@@ -276,6 +287,14 @@ void Stage2(struct am_recovery_device *rdev) { // Booting in recovery mode
 	
 	sendCommandToDevice(rdev, CFStringCreateWithCString(kCFAllocatorDefault,
 		"setenv boot-parition 0", kCFStringEncodingUTF8));
+  }
+
+  if (verbose) {
+    sendCommandToDevice(rdev, CFStringCreateWithCString(kCFAllocatorDefault, "setenv boot-args -v", kCFStringEncodingUTF8));
+	 
+	
+    sendCommandToDevice(rdev, CFStringCreateWithCString(kCFAllocatorDefault,
+		"setenv boot-parition 0", kCFStringEncodingUTF8))
   }
 
     sendCommandToDevice(rdev, CFStringCreateWithCString(kCFAllocatorDefault, "saveenv", kCFStringEncodingUTF8));
@@ -436,7 +455,7 @@ void Banner() {
   cout << "  ZZZZZZZZZZZ                 ZZZZZZZZ" << endl;
   cout << "ZZZZZZZZZZZZ              ZZZZZZZZZZZZ" << endl; 
   cout << "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" << endl << endl;
-  cout << "ZiPhone v3.4 by Zibri. https://ziphone.zibri.org" << endl;
+  cout << "ZiPhone v3.4a by Zibri. https://ziphone.zibri.org" << endl;
   cout << "Source code available at: http://whitera1n.com" << endl;
   cout << endl;
 }
@@ -476,7 +495,7 @@ void UsageNormal() {
 
 void UsageAdvanced() {
   Banner();
-  cout << "Usage: ziphone [-b] [-e] [-u] [-a] [-j] [-R] [-D] [-L] [-i imei]" << endl;
+  cout << "Usage: ziphone [-b] [-e] [-u] [-a] [-j] [-R] [-D] [-v] [-i imei]" << endl;
   cout << endl;
   cout << "       -b: Downgrade iPhone bootloader 4.6 to 3.9." << endl;
   cout << "       -u: Unlock iPhone 1.1.4." << endl;
@@ -488,6 +507,7 @@ void UsageAdvanced() {
   cout << "       -R: Enter Recovery Mode. (no real need now)." << endl;
   cout << "       -N: Exit Recovery Mode (normal boot)." << endl;
   cout << "       -C: Make coffee. (and relax!)." << endl;
+  cout << "       -v: Debug boot (verbose)." << endl;
   cout << endl;
 }
 
