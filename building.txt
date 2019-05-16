@@ -5,8 +5,8 @@ so:
 
 -Open either Terminal.app or a something with a shell.
 -Cd into the "buildscripts" directory.
--Execute the command "./ramdisklinux.sh" if your on Linux or 
-"./amdiskmac.sh" if your on Mac OS X.
+-Execute the command "./linuxramdisk.sh" if your on Linux or 
+"./macramdisk.sh" if your on Mac OS X.
 
 --Build ZiPhone CLI on Mac OS X--
 
