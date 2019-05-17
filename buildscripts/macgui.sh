@@ -20,7 +20,7 @@ xcodebuild
 rm -rf ConsoleResources
 rm -rf build
 rm -rf Base.lproj
-tar -xvf ZiPhoneOSX-3.4.tbz
+tar -xvf ZiPhoneOSX-3.4a.tbz
 rm ZiPhoneOSX-3.4a.tbz
 cp -r ZiPhoneOSX.app ../ZiPhoneOSX.app
 rm -r ZiPhoneOSX.app
@@ -30,7 +30,7 @@ cp dfu.dat ZiPhoneOSX.app/Contents/Resources/dfu.dat
 cp zibri.dat ZiPhoneOSX.app/Contents/Resources/zibri.dat
 cp igor.dat ZiPhoneOSX.app/Contents/Resources/igor.dat
 cp victor.dat ZiPhoneOSX.app/Contents/Resources/victor.dat
-cp docs/readme.txt ZiPhoneOSX.app/Contents/Resources/readme.txt
+cp ziphone-mac-os-x-gui/readme.txt ZiPhoneOSX.app/Contents/Resources/readme.txt
 cp docs/troubleshooting.txt ZiPhoneOSX.app/Contents/Resources/troubleshooting.txt
 rm -rf ZiPhone
 mkdir ZiPhone

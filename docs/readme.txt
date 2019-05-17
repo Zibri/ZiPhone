@@ -11,13 +11,11 @@
 ZiPhone version 3.4a (16th of May 2019)
 ===================================================================================
 
--Replaced the ramdisk BSD Subsystem with moden utilities I compiled such as Bash 
-version 4.4.
--Made the ramdisk smarter so it only does things when it makes sense and is much 
-faster overall.
 -Debug boot (ziphone -v) from the original ZiPhone versions is back.
--Unlock upgraded, ziphone -u will now unlock any 1.1.4 iPhone, or any 1.1.2 iPhone 
-with bootloader 4.6.
+-Unlock upgraded, ziphone -u will now unlock any 1.1.2 BL4.6, and any BL3.9 or 4.6 1.1.3- 1.1.4 iPhone.
+-FTL failure check (never done before!). 2.0 beta 2 can now be jailbroken automatically,
+just run ziphone -j like normal. It will enter Recovery Mode, wait 2 minutes for FTL (which always fails on 2.0 beta 2 when entering Recovery Mode) and activate + add AFC2! This change also means on 1.0-1.1.5 there will almost never be problems.
+-Redesigned activation for 2.0 beta 2.
 
 Ziphone version 3.4 (14th of May 2019)
 =================================================================================== 
@@ -34,8 +32,6 @@ Rewrite of ZiPhone Linux is compatible with all distributions that have lib-usb 
 1.0 or newer.
 Improved ramdisk and Mac GUI. 
 Localization fixed for Mac GUI.
-ziphone -b now flashes 1.1.4 baseband, since there would otherwise be no
-baseband.
 
 Ziphone version 3.3 (31st of March 2019)
 ===================================================================================  
