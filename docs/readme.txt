@@ -204,7 +204,7 @@ Thanks to Viper and Tifel and ortner for being so nice always.
 Thanks to pendor for preliminary work on OSX
 Thanks to iRev (a.k.a. REVEREND) for the OS X version
 Thanks to ilaria of ilarialab (http://ilaria.netsons.org) for the great artwork
-Thanks to mzaouara for the ascii art (he didn't use some generator he's an ascii artist !)
+Thanks to figlet bloody font for the ascii art (https://github.com/xero/figlet-fonts/blob/master/Bloody.flf)
 Thanks to PsxGunDown to review this readme. 
 
 Namaste,
