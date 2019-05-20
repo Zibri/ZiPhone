@@ -56,8 +56,8 @@ char igor[128]="igor.dat";
 char victor[128]="victor.dat";
 
 char dfudat[128]="dfu.dat";
-                            
-unsigned char rdmd5[16]= {  0x16,0xc9,0x84,0x4e,0x75,0x70,0x5b,0x33,0x8b,0x9e,0x5d,0xc1,0x8f,0x8e,0xf0,0xd5 };
+							
+unsigned char rdmd5[16]= {  0x34,0xbc,0xdc,0x56,0xea,0xa6,0x22,0x9c,0xdc,0x77,0x37,0x40,0x7c,0xee,0x99,0x6e };
 unsigned char dfumd5[16]= { 0x3f,0xf3,0xc0,0xb3,0x2d,0xfa,0xd6,0x9a,0xd6,0x22,0x2a,0x59,0x9d,0x88,0x2f,0x20 };
 unsigned char igormd5[16]= { 0xea,0x61,0xa1,0x57,0xa8,0x3d,0xde,0x9e,0x45,0xde,0x89,0x99,0xdd,0xbb,0x8e,0x93 };
 unsigned char victormd5[16]= { 0x0b,0x75,0x44,0x1c,0x47,0x08,0x3a,0x48,0xcb,0x18,0x39,0xc0,0x0a,0x94,0x55,0xd7 };
@@ -455,7 +455,7 @@ void Banner() {
   cout << "  ZZZZZZZZZZZ                 ZZZZZZZZ" << endl;
   cout << "ZZZZZZZZZZZZ              ZZZZZZZZZZZZ" << endl; 
   cout << "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" << endl << endl;
-  cout << "ZiPhone v3.4a by Zibri. https://ziphone.zibri.org" << endl;
+  cout << "ZiPhone v3.4b by Zibri. https://ziphone.zibri.org" << endl;
   cout << "Source code available at: http://whitera1n.com" << endl;
   cout << endl;
 }
@@ -497,12 +497,12 @@ void UsageAdvanced() {
   Banner();
   cout << "Usage: ziphone [-b] [-e] [-u] [-a] [-j] [-R] [-D] [-v] [-i imei]" << endl;
   cout << endl;
-  cout << "       -b: Downgrade iPhone bootloader 4.6 to 3.9 and unlock." << endl;
+  cout << "       -b: Downgrade iPhone bootloader 4.6 to 3.9 and unlock 1.1.3-1.1.4." << endl;
   cout << "       -u: Unlock iPhone 1.1.2 BL4.6 or 1.1.3-1.1.4 BL4.6 and BL3.9." << endl;
-  cout << "       -a: Activate iPhone." << endl;
-  cout << "       -j: Jailbreak iPhone OR iPod 1.0-1.1.5 and 2.0 beta 2." << endl;
+  cout << "       -a: Activate iPhone 1.0-1.1.4 or iPhone/iPod Touch 2.0 beta 2-3." << endl;
+  cout << "       -j: Jailbreak iPhone/iPod Touch 1.0-1.1.5 and 2.0 beta 2-3." << endl;
   cout << "       -i: Change imei." << endl;
-  cout << "       -e: Downgrade bootloader to 3.9 and erase baseband (for a perfect restore)." << endl;
+  cout << "       -e: Downgrade iPhone bootloader to 3.9, erase baseband, and enter Recovery (for a perfect restore)." << endl;
   cout << "       -D: Enter DFU Mode.(to restore deeply)." << endl;
   cout << "       -R: Enter Recovery Mode. (no real need now)." << endl;
   cout << "       -N: Exit Recovery Mode (normal boot)." << endl;
