@@ -4,6 +4,8 @@ Compatible Mac OS X versions: Mac OS X 10.4.10 Tiger-Mac OS X 10.8.5 Mountain Li
 
 Compatible Linux versions: All x86/x86_64 distributions with Lib-usb version 1.0 or newer installed.
 
+On Windows and Mac OS X, iTunes must be installed for ZiPhone to work. iTunes version 7.3-7.7.1 are compatible with ZiPhone, however iTunes version 7.5 is recommended as this one version can restore/downgrade/update 1.0-2.0 beta 3 offline. See restore.txt for more information.
+
 --Windows CLI Traditional--
 -Open cmd.exe.
 -Cd into the ZiPhone executable directory.
