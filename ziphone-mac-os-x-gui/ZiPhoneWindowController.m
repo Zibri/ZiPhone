@@ -566,6 +566,13 @@
 }
 
 /**
+ * Verbose boot -v.
+ */
+-(IBAction)mnuTestSelected:(id)sender {
+  [self startConsoleWithOptions:[NSArray arrayWithObjects:@"-v", nil]];
+}
+
+/**
  * Run MD5 check.
  */
 - (IBAction)mnuCoffeeSelected:(id)sender {
@@ -596,10 +603,10 @@
 }
 
 /**
- * Everything but unlock (-Z N).
+ * Jailbreak and activate (fixed by lex) (-j -a). Why would do everything and this have same args?
  */
 - (IBAction)aioDontUnlock:(id)sender {
-  [self startConsoleWithOptions:[NSArray arrayWithObjects:@"-Z", @"N", nil]];
+  [self startConsoleWithOptions:[NSArray arrayWithObjects:@"-j", @"-a", nil]];
 }
 
 /**
@@ -647,7 +654,7 @@
 
 
 /**
- * Return an object to display in the column/row.
+ * Return an object to display in the column/row. Changed bl39 to unlocked.tff and activate to locked.tiff
  */
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex {
   if([[aTableColumn identifier] isEqualToString:@"text"]) {
@@ -658,13 +665,13 @@
         return [NSImage imageNamed:@"Unlocked.tif"];
         break;
       case 1:
-        return [NSImage imageNamed:@"Unlocked.tif"];
+        return [NSImage imageNamed:@"Locked.tif"];
         break;
       case 2:
         return [NSImage imageNamed:@"Key.tif"];
         break;
       case 3:
-        return [NSImage imageNamed:@"Locked.tif"];
+        return [NSImage imageNamed:@"Unlocked.tif"];
         break;
       default:
         return nil;

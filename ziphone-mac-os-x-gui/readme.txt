@@ -1,3 +1,29 @@
+ZiPhone version 3.4b (18th of May 2019)
+===================================================================================
+-2.0 beta 3 support has been added. 2.0 beta support has also been rewritten to 
+work like other versions.
+
+-1.1-1.1.5 iPod Touch activation support. No more "upgrade to iTunes 10 or greater"
+messages in iTunes.
+
+-Fixed some decade old bugs in that Mac OS X GUI.
+
+-Rewrote some options and added more information in the Mac OS X GUI.
+
+-Using ziphone -j just jailbreaks 1.0-1.1.5 or 2.0 beta 2-3 iPhones or iPod Touchs. 
+
+-Using ziphone -a just activates a 1.0-1.1.5 or 2.0 beta 2-3 iPhone or iPod Touch,
+
+The 2.0 betas are activated with an original patch by me (lex) and ParrotGeek. In 
+the lockdownds found in the 2.0 betas there is a routine Apple used to automatically
+activated an iPhone 3G or iPod Touch 2G (keep in mind that these were not released 
+until many months after the 2.0 betas). ZiPhone patches this routine to instead 
+automatically activate an iPhone 2G or iPod Touch 1 instead.
+
+-Using ziphone -e now will enter Recovery Mode automatically, so you can immediately 
+restore 1.0.1-1.1.4 in iTunes to flash a baseband. If you want to restore to a lower version just run ziphone -D after ziphone -e (if your on 1.0-1.1.4). After a baseband erase you can't unlock until you restore in iTunes.
+-Unlock detection and FTL failure checks improved.
+                                                      
 ZiPhone version 3.4a (16th of May 2019)
 ===================================================================================
 
@@ -70,8 +96,7 @@ The command "ziphone -Z I" will now:
 -Jailbreak an iPhone on firmware 2.0 beta 2.
 
 The jailbreak allows you to connect to AFC2 with iPHUC. It will also hactivate so you 
-can use the beta. Code sign is not patched by ZiPhone.
-
+can use the beta. 
 
 Ziphone version 3.2 (25th of Febuary 2019)
 ===================================================================================
@@ -194,7 +219,7 @@ Thanks to Viper and Tifel and ortner for being so nice always.
 Thanks to pendor for preliminary work on OSX
 Thanks to iRev (a.k.a. REVEREND) for the OS X version
 Thanks to ilaria of ilarialab (http://ilaria.netsons.org) for the great artwork
-Thanks to mzaouara for the ascii art (he didn't use some generator he's an ascii artist !)
+Thanks to figlet bloody font for the ascii art (https://github.com/xero/figlet-fonts/blob/master/Bloody.flf)
 Thanks to PsxGunDown to review this readme. 
 
 Namaste,
