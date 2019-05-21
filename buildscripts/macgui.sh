@@ -20,8 +20,8 @@ xcodebuild
 rm -rf ConsoleResources
 rm -rf build
 rm -rf Base.lproj
-tar -xvf ZiPhoneOSX-3.4b.tbz
-rm ZiPhoneOSX-3.4b.tbz
+tar -xvf ZiPhoneOSX-3.4c.tbz
+rm ZiPhoneOSX-3.4c.tbz
 cp -r ZiPhoneOSX.app ../ZiPhoneOSX.app
 rm -r ZiPhoneOSX.app
 cd ../

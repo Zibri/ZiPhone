@@ -3,4 +3,5 @@
 cd ../
 rm -rf ZiPhone
 rm -f zibri.dat
-echo "Build deleted."
+find . -name '.DS_Store' -type f -delete
+echo "Nice and clean."
