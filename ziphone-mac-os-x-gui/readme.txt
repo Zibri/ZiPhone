@@ -1,3 +1,9 @@
+ZiPhone version 3.4c (21st of May 2019)
+===================================================================================
+-Improved speed and reliability.
+-Updated links to http://ziphone.co. 
+-Updated Mac OS X GUI link to http://ziphone.zibri.org.
+
 ZiPhone version 3.4b (18th of May 2019)
 ===================================================================================
 -2.0 beta 3 support has been added. 2.0 beta support has also been rewritten to 
