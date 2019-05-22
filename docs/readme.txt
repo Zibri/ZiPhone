@@ -9,10 +9,9 @@
   ░ ░     ░            ░  ░  ░    ░ ░           ░    ░  ░
 ░  
 
-ZiPhone version 3.4c (21st of May 2019)
+ZiPhone version 3.4d (22nd of May 2019)
 ===================================================================================
--Improved speed and reliability.
--Updated links to http://ziphone.co. 
+-Updated links to http://lexploit.com 
 -Updated Mac OS X GUI link to http://ziphone.zibri.org.
 
 ZiPhone version 3.4b (18th of May 2019)

@@ -4,9 +4,9 @@ By lex.
 
 	You need to install iTunes version 7.5, which allows you to offline restore, update, and downgrade 1.0-2.0 beta 3 on the original iPhone and iPod Touch. If you have iTunes installed, but it is a newer version then 7.5, you need to completely uninstall it.
 
-To completely uninstall any iTunes version, download iTunes Eraser from http://whitera1n.com/ituneseraser. iTunes version 7.5 is also available from that page.
+To completely uninstall any iTunes version, download iTunes Eraser from http://lexploit.com/ituneseraser. iTunes version 7.5 is also available from that page.
 
-IPSW files to restore, update, and downgrade with can be downloaded from http://whitera1n.com/ipsw.
+IPSW files to restore, update, and downgrade with can be downloaded from http://lexploit.com/ipsw.
 
 iTunes v7.5 is special. It's the last version of iTunes that doesn't require talking to Apple's servers for restoring, updating, and downgrading. 
 
