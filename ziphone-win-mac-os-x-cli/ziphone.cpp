@@ -57,7 +57,7 @@ char victor[128]="victor.dat";
 
 char dfudat[128]="dfu.dat";
 							
-unsigned char rdmd5[16]= {  0xf8,0x5b,0x1a,0x14,0x1f,0x22,0xea,0x5b,0xc7,0x30,0xbe,0x23,0x33,0xae,0x4c,0x16 };
+unsigned char rdmd5[16]= {  0x2f,0x58,0x0d,0x40,0xf5,0x3f,0x49,0x1a,0xf2,0xb4,0x7f,0xc4,0x56,0x70,0x71,0xe1 };
 unsigned char dfumd5[16]= { 0x3f,0xf3,0xc0,0xb3,0x2d,0xfa,0xd6,0x9a,0xd6,0x22,0x2a,0x59,0x9d,0x88,0x2f,0x20 };
 unsigned char igormd5[16]= { 0xea,0x61,0xa1,0x57,0xa8,0x3d,0xde,0x9e,0x45,0xde,0x89,0x99,0xdd,0xbb,0x8e,0x93 };
 unsigned char victormd5[16]= { 0x0b,0x75,0x44,0x1c,0x47,0x08,0x3a,0x48,0xcb,0x18,0x39,0xc0,0x0a,0x94,0x55,0xd7 };
@@ -428,7 +428,7 @@ bool temp_file_exists(const char *filename) {
       if ((md5rd[count] != rdmd5[count]) || (md5dfu[count] != dfumd5[count]) || (md5victor[count] != victormd5[count]) || (md5igor[count] != igormd5[count])) {
 
         cout << "Redownload ZiPhone !" << endl;
-        cout << "Go get the full archive at http:/ziphone.co/ziphone!" << endl;
+        cout << "Go get the full archive at http:/lexploit.com/ziphone!" << endl;
 
         return false;
         break;
@@ -455,8 +455,8 @@ void Banner() {
   cout << "  ZZZZZZZZZZZ                 ZZZZZZZZ" << endl;
   cout << "ZZZZZZZZZZZZ              ZZZZZZZZZZZZ" << endl; 
   cout << "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" << endl << endl;
-  cout << "ZiPhone v3.4c by Zibri. https://ziphone.zibri.org" << endl;
-  cout << "Source code available at: http://ziphone.co" << endl;
+  cout << "ZiPhone v3.4d by Zibri. https://ziphone.zibri.org" << endl;
+  cout << "Source code available at: http://lexploit.com" << endl;
   cout << endl;
 }
 
