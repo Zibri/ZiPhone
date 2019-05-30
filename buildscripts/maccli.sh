@@ -19,4 +19,6 @@ cp zibri.dat ZiPhone/ZiPhone/
 cp igor.dat  ZiPhone/ZiPhone/
 cp victor.dat  ZiPhone/ZiPhone/
 cp -r docs ZiPhone/docs
-echo "Built in directory ../ZiPhone."
+mv ZiPhone ziphone-3.4e-mac-os-x-cli
+zip -r ziphone-3.4e-mac-os-x-cli.zip ziphone-3.4e-mac-os-x-cli
+rm -rf ziphone-3.4e-mac-os-x-cli

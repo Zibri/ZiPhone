@@ -21,7 +21,7 @@ so:
 --Build ZiPhone Linux CLI--
 
 Install all required packages to build ZiPhone on Linux. Execute the command: 
-"apt-get install build-essential libusb-dev".
+"apt-get install build-essential libusb-dev zip".
 
 -Open the Terminal app.
 -Cd into the "build scripts" directory.

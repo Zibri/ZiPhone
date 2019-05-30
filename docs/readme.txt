@@ -9,6 +9,10 @@
   ░ ░     ░            ░  ░  ░    ░ ░           ░    ░  ░
 ░  
 
+ZiPhone version 3.4e (29th of May 2019)
+===================================================================================
+-Fixed an issue where SummerBoard would theme the iPhone dock on iPod Touch 1.1 and 1.1.1 firmware.
+
 ZiPhone version 3.4d (22nd of May 2019)
 ===================================================================================
 -Updated links to http://lexploit.com 

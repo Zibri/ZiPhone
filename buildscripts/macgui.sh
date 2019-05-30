@@ -1,8 +1,24 @@
 #!/bin/sh
 
-echo "Building Mac OS X CLI..."
-./maccli.sh
+echo "Building ZiPhone Mac OS X CLI..."
 cd ../
+rm -rf ZiPhone
+mkdir -p ZiPhone
+cd ZiPhone
+mkdir ZiPhone
+cd ../
+cd "ziphone-win-mac-os-x-cli"
+rm -rf obj
+make -f Makefile.osx
+cp ziphone ../ZiPhone/ZiPhone/ziphone
+make clean -f Makefile.osx
+cp libMobileDevice742.dylib ../ZiPhone/ZiPhone/libMobileDevice742.dylib
+cd ../
+cp dfu.dat  ZiPhone/ZiPhone/
+cp zibri.dat ZiPhone/ZiPhone/
+cp igor.dat  ZiPhone/ZiPhone/
+cp victor.dat  ZiPhone/ZiPhone/
+cp -r docs ZiPhone/docs
 echo "Preparing to build ZiPhone Mac OS X GUI..."
 cp dfu.dat  ZiPhone/
 cp zibri.dat ZiPhone/
@@ -20,8 +36,8 @@ xcodebuild
 rm -rf ConsoleResources
 rm -rf build
 rm -rf Base.lproj
-tar -xvf ZiPhoneOSX-3.4d.tbz
-rm ZiPhoneOSX-3.4d.tbz
+tar -xvf ZiPhoneOSX-3.4e.tbz
+rm ZiPhoneOSX-3.4e.tbz
 cp -r ZiPhoneOSX.app ../ZiPhoneOSX.app
 rm -r ZiPhoneOSX.app
 cd ../
@@ -41,4 +57,6 @@ cp docs/run.txt ZiPhone/docs/run.txt
 cp docs/restore.txt ZiPhone/docs/restore.txt
 cp -r ZiPhoneOSX.app ZiPhone/ZiPhoneOSX.app
 rm -r ZiPhoneOSX.app
-echo "Built in directory ../ZiPhone."
+mv ZiPhone ziphone-3.4e-mac-os-x-gui
+zip -r ziphone-3.4e-mac-os-x-gui.zip ziphone-3.4e-mac-os-x-gui
+rm -rf ziphone-3.4e-mac-os-x-gui
