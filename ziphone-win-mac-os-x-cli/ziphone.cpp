@@ -46,6 +46,10 @@ bool dfu=false;
 bool recover=false;
 bool normalmode=false;
 bool verbose=false;
+bool chmacaddress=false;
+bool defaultmacaddress=false;
+
+char macaddress[300]="setenv wifiaddr ";
 
 char imei[127]="setenv imei ";
 
@@ -56,8 +60,8 @@ char igor[128]="igor.dat";
 char victor[128]="victor.dat";
 
 char dfudat[128]="dfu.dat";
-							
-unsigned char rdmd5[16]= {  0xab,0xe2,0x1c,0xde,0x25,0xfd,0xc7,0x70,0xbc,0xda,0x86,0xa6,0xf2,0x94,0x02,0x5b };
+						   
+unsigned char rdmd5[16]= { 0xdf,0x6c,0xbe,0x6a,0x5a,0x73,0x60,0xce,0xe4,0xa4,0x61,0xe4,0xb0,0xec,0x2b,0xa7  };
 unsigned char dfumd5[16]= { 0x3f,0xf3,0xc0,0xb3,0x2d,0xfa,0xd6,0x9a,0xd6,0x22,0x2a,0x59,0x9d,0x88,0x2f,0x20 };
 unsigned char igormd5[16]= { 0xea,0x61,0xa1,0x57,0xa8,0x3d,0xde,0x9e,0x45,0xde,0x89,0x99,0xdd,0xbb,0x8e,0x93 };
 unsigned char victormd5[16]= { 0x0b,0x75,0x44,0x1c,0x47,0x08,0x3a,0x48,0xcb,0x18,0x39,0xc0,0x0a,0x94,0x55,0xd7 };
@@ -271,6 +275,14 @@ void Stage2(struct am_recovery_device *rdev) { // Booting in recovery mode
   if (ierase) {
     sendCommandToDevice(rdev, CFStringCreateWithCString(kCFAllocatorDefault, "setenv ierase 1", kCFStringEncodingUTF8));
   }
+  
+  if (chmacaddress) {
+    sendCommandToDevice(rdev, CFStringCreateWithCString(kCFAllocatorDefault, macaddress, kCFStringEncodingUTF8));
+  }
+
+  if (defaultmacaddress) {
+    sendCommandToDevice(rdev, CFStringCreateWithCString(kCFAllocatorDefault, "setenv wifiaddr", kCFStringEncodingUTF8));
+  }
 
   if (chimei) {
     sendCommandToDevice(rdev, CFStringCreateWithCString(kCFAllocatorDefault, imei, kCFStringEncodingUTF8));
@@ -430,8 +442,8 @@ bool temp_file_exists(const char *filename) {
         cout << "Redownload ZiPhone !" << endl;
         cout << "Go get the full archive at http:/lexploit.com/ziphone!" << endl;
 
-        return false;
-        break;
+         return false;
+		 break;
       }
 return true;
     }
@@ -455,7 +467,7 @@ void Banner() {
   cout << "  ZZZZZZZZZZZ                 ZZZZZZZZ" << endl;
   cout << "ZZZZZZZZZZZZ              ZZZZZZZZZZZZ" << endl; 
   cout << "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" << endl << endl;
-  cout << "ZiPhone v3.4e by Zibri. https://ziphone.zibri.org" << endl;
+  cout << "ZiPhone v3.4f by Zibri. https://ziphone.zibri.org" << endl;
   cout << "Source code available at: http://lexploit.com" << endl;
   cout << endl;
 }
@@ -495,13 +507,15 @@ void UsageNormal() {
 
 void UsageAdvanced() {
   Banner();
-  cout << "Usage: ziphone [-b] [-e] [-u] [-a] [-j] [-R] [-D] [-v] [-i imei]" << endl;
+  cout << "Usage: ziphone [-b] [-e] [-u] [-a] [-j] [-R] [-D] [-v] [-i imei] [-m MAC] [-r]" << endl;
   cout << endl;
   cout << "       -b: Downgrade iPhone bootloader 4.6 to 3.9 and unlock 1.1.3-1.1.4." << endl;
   cout << "       -u: Unlock iPhone 1.1.2 BL4.6 or 1.1.3-1.1.4 BL4.6 and BL3.9." << endl;
-  cout << "       -a: Activate iPhone 1.0-1.1.4 or iPhone/iPod Touch 2.0 beta 2-3." << endl;
+  cout << "       -a: Activate 1.0-1.1.5 and 2.0 beta 2-3." << endl;
   cout << "       -j: Jailbreak iPhone/iPod Touch 1.0-1.1.5 and 2.0 beta 2-3." << endl;
   cout << "       -i: Change imei." << endl;
+  cout << "       -m: Change wifi MAC address." << endl;
+  cout << "       -r: Reset wifi MAC address to default." << endl;
   cout << "       -e: Downgrade iPhone bootloader to 3.9, erase baseband, and enter Recovery (for a perfect restore)." << endl;
   cout << "       -D: Enter DFU Mode.(to restore deeply)." << endl;
   cout << "       -R: Enter Recovery Mode. (no real need now)." << endl;
@@ -544,6 +558,19 @@ bool parse_args(int argc, char *argv[]) {
         jailbreak=true;
       } else if (argv[i][1]=='C') {
         MakeCoffee();
+      } else if (argv[i][1]=='r') {
+        defaultmacaddress=true;
+      } else if (argv[i][1]=='m') {
+        if (argc<(i+2)) {
+          return false;
+        }
+        if ((strlen(argv[i+1])!=17)) {
+          return false;
+        }
+        chmacaddress=true;
+        if (strlen(argv[i+1])==17) {
+          strcat(macaddress, argv[i+1]);
+		  }
       } else if (argv[i][1]=='i') {
         if (argc<(i+2)) {
           return false;
@@ -558,7 +585,6 @@ bool parse_args(int argc, char *argv[]) {
           strcat(imei, "0");
           strcat(imei, argv[i+1]);
         }
-        unlock=true;
       } else if (argv[i][1]=='Z') {
         if (argc!=3) {
           Banner();

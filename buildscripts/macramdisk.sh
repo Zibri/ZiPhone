@@ -2,6 +2,7 @@
 
 echo "Generating offset file..."
 cd ../
+rm -f zibri.dat
 dd if=/dev/zero bs=$((0xCC2000)) count=1 of=Offset
 echo "Adding offset to zibri.dat..."
 cat Offset zibri.dmg > zibri.dat

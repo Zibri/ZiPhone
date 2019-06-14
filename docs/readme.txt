@@ -1,21 +1,31 @@
-▒███████▒ ██▓ ██▓███   ██░ ██  ▒█████   ███▄    █ ▓█████ 
-▒ ▒ ▒ ▄▀░▓██▒▓██░  ██▒▓██░ ██▒▒██▒  ██▒ ██ ▀█   █ ▓█   ▀ 
-░ ▒ ▄▀▒░ ▒██▒▓██░ ██▓▒▒██▀▀██░▒██░  ██▒▓██  ▀█ ██▒▒███   
-  ▄▀▒   ░░██░▒██▄█▓▒ ▒░▓█ ░██ ▒██   ██░▓██▒  ▐▌██▒▒▓█  ▄ 
-▒███████▒░██░▒██▒ ░  ░░▓█▒░██▓░ ████▓▒░▒██░   ▓██░░▒████▒
-░▒▒ ▓░▒░▒░▓  ▒▓▒░ ░  ░ ▒ ░░▒░▒░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░░ ▒░ ░
-░░▒ ▒ ░ ▒ ▒ ░░▒ ░      ▒ ░▒░ ░  ░ ▒ ▒░ ░ ░░   ░ ▒░ ░ ░  ░
-░ ░ ░ ░ ░ ▒ ░░░        ░  ░░ ░░ ░ ░ ▒     ░   ░ ░    ░   
-  ░ ░     ░            ░  ░  ░    ░ ░           ░    ░  ░
-░  
+ZiPhone version 3.4f (12th of June 2019)
+===================================================================================
+-Fixed an issue where if you attempted to downgrade bootloader/unlock an iPod Touch  
+on 2.0 beta ZiPhone would freeze.
+
+-Added a new saftey check, ZiPhone will only continue jailbreaking if it 
+successfully mounted disks and performed operations correctly.
+
+-(Not yet available in the linux version) Added ziphone -m, the WiFi MAC address 
+changer option. This option will allow you to spoof your WiFi MAC address on 
+1.0-2.0 beta 3 firmware. It works just like the change IMEI option, ./ziphone -m 
+<MAC address>. Replace <MAC address with a real MAC address you want to your device 
+to have, for example ./ziphone -m 10:10:10:10:10:10 will change your iPhone or iPod 
+Touch's MAC address to 10:10:10:10:10:10. 
+
+-(Not yet availble in the linux version) Added ziphone -r, the WiFi MAC address 
+reset option. If you change your MAC address and want to revert it back to the 
+original hardware MAC address, use this option.
 
 ZiPhone version 3.4e (29th of May 2019)
 ===================================================================================
--Fixed an issue where SummerBoard would theme the iPhone dock on iPod Touch 1.1 and 1.1.1 firmware.
+-Fixed an issue where SummerBoard would theme the iPhone dock on iPod Touch 1.1 and 
+1.1.1 firmware.
 
 ZiPhone version 3.4d (22nd of May 2019)
 ===================================================================================
 -Updated links to http://lexploit.com 
+
 -Updated Mac OS X GUI link to http://ziphone.zibri.org.
 
 ZiPhone version 3.4b (18th of May 2019)
@@ -41,16 +51,21 @@ until many months after the 2.0 betas). ZiPhone patches this routine to instead
 automatically activate an iPhone 2G or iPod Touch 1 instead.
 
 -Using ziphone -e now will enter Recovery Mode automatically, so you can immediately 
-restore 1.0.1-1.1.4 in iTunes to flash a baseband. If you want to restore to a lower version just run ziphone -D after ziphone -e (if your on 1.0-1.1.4). After a baseband erase you can't unlock until you restore in iTunes.
+restore 1.0.1-1.1.4 in iTunes to flash a baseband. If you want to restore to a lower 
+version just run ziphone -D after ziphone -e (if your on 1.0-1.1.4). After a baseband 
+erase you can't unlock until you restore in iTunes.
 -Unlock detection and FTL failure checks improved.
                                                       
 ZiPhone version 3.4a (16th of May 2019)
 ===================================================================================
 
 -Debug boot (ziphone -v) from the original ZiPhone versions is back.
--Unlock upgraded, ziphone -u will now unlock any 1.1.2 BL4.6, and any BL3.9 or 4.6 1.1.3- 1.1.4 iPhone.
+-Unlock upgraded, ziphone -u will now unlock any 1.1.2 BL4.6, and any BL3.9 or 4.6 
+1.1.3- 1.1.4 iPhone.
 -FTL failure check (never done before!). 2.0 beta 2 can now be jailbroken automatically,
-just run ziphone -j like normal. It will enter Recovery Mode, wait 2 minutes for FTL (which always fails on 2.0 beta 2 when entering Recovery Mode) and activate + add AFC2! This change also means on 1.0-1.1.5 there will almost never be problems.
+just run ziphone -j like normal. It will enter Recovery Mode, wait 2 minutes for FTL 
+(which always fails on 2.0 beta 2 when entering Recovery Mode) and activate + add AFC2! 
+This change also means on 1.0-1.1.5 there will almost never be problems.
 -Redesigned activation for 2.0 beta 2.
 
 Ziphone version 3.4 (14th of May 2019)
@@ -199,10 +214,10 @@ For 1.1.3 use version 2.4 OR 2.5 (still in testing for 1.1.3)
 Ziphone version 2.4 (17th Feb 2008) 23:28 CET
 ===================================================================================
 
-Starting with version 2.4, Ziphone provides a simple all-in-one interface or a separate
-advanced interface for experts or for people who needs more control over the jailbreak
-process.  Users with AT&T or other "legitimate" iPhone carrier SIMs may wish to use the
-advanced interface in order to retain their own real activation tokens.
+Starting with version 2.4, Ziphone provides a simple all-in-one interface or a 
+separate advanced interface for experts or for people who needs more control over the 
+jailbreak process.  Users with AT&T or other "legitimate" iPhone carrier SIMs may wish
+to use the advanced interface in order to retain their own real activation tokens.
 
 The two all-in one modes are:
   ziphone -Z Y
@@ -223,8 +238,9 @@ For customers of official iPhone cell carriers, it may be preferable to run:
     Jailbreak and also unlock 1.1.4 firmware.
     
 Note that after running a jailbreak on a "fresh" phone, you will need to manually install
-the "BSD Subsystem" package from Installer before many other programs will work.  This package
-is NOT included in Ziphone due to size restrictions of the jailbreaking ramdisk.
+the "BSD Subsystem" package from Installer before many other programs will work.  
+This packageis NOT included in Ziphone due to size restrictions of the jailbreaking 
+ramdisk.
 
 ===================================================================================
 
@@ -239,7 +255,8 @@ Thanks to Viper and Tifel and ortner for being so nice always.
 Thanks to pendor for preliminary work on OSX
 Thanks to iRev (a.k.a. REVEREND) for the OS X version
 Thanks to ilaria of ilarialab (http://ilaria.netsons.org) for the great artwork
-Thanks to figlet bloody font for the ascii art (https://github.com/xero/figlet-fonts/blob/master/Bloody.flf)
+Thanks to figlet bloody font for the ascii art 
+(https://github.com/xero/figlet-fonts/blob/master/Bloody.flf)
 Thanks to PsxGunDown to review this readme. 
 
 Namaste,
@@ -247,7 +264,8 @@ Zibri.
 
 ===================================================================================
 
-Additionally, ZiPhone Linux would not be possible without Planetbeing's work on his Xpwn utility, and Geohot's work on iBooter.
+Additionally, ZiPhone Linux would not be possible without Planetbeing's work on his 
+Xpwn utility, and Geohot's work on iBooter.
 -Lex. 
 
 Legal notice:
@@ -269,5 +287,5 @@ then
 
 ziphone -D
 
-then restore to 1.0.1 or newer. If your on 2.0 beta 2, ziphone -D won't work. You need to enter DFU mode manually,
-or use Recovery Mode.
+then restore to firmware 1.0.1 or newer. If your on 2.0 beta or newer, ziphone -D 
+won't work. You need to enter DFU mode manually, or use Recovery Mode.

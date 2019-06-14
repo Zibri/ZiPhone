@@ -1,0 +1,11 @@
+--TODO--
+
+-Try to patch lockdownd of 2.0 beta 2 and 3 from iTunes 7.6.2 and higher required to iTunes 7.4.2 and higher required to enable lower iTunes version syncing after activation.
+
+-Complete rewrite of the linux ZiPhone to function exactly like Zibri's Windows/Mac CLI and reach feature parity.
+
+-Going off of the linux version, create a modern Mac version that does not require iTunes and works on the latest Mac OS (which iTunes version 7.5 does not work on, but I'm still not sure when compatibility broke, this must be investigated). 
+
+-Going off of the linux version, create an official ZiPhone Android (probably will only be for rooted devices at first).
+
+-Add back the ASCII art that got messed up somehow with formatting of the readme.txt file.
