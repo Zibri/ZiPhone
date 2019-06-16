@@ -2,7 +2,7 @@
 
 echo "Building ZiPhone Mac OS X CLI..."
 cd ../
-rm -rf ZiPhone ziphone-3.4f-mac-os-x-cli.zip ziphone-3.4f-mac-os-x-cli
+rm -rf ZiPhone ziphone-3.4g-mac-os-x-cli.zip ziphone-3.4g-mac-os-x-cli
 mkdir -p ZiPhone
 cd ZiPhone
 mkdir ZiPhone
@@ -19,6 +19,6 @@ cp zibri.dat ZiPhone/ZiPhone/
 cp igor.dat  ZiPhone/ZiPhone/
 cp victor.dat  ZiPhone/ZiPhone/
 cp -r docs ZiPhone/docs
-mv ZiPhone ziphone-3.4f-mac-os-x-cli
-zip -r ziphone-3.4f-mac-os-x-cli.zip ziphone-3.4f-mac-os-x-cli
-rm -rf ziphone-3.4f-mac-os-x-cli
+mv ZiPhone ziphone-3.4g-mac-os-x-cli
+zip -r ziphone-3.4g-mac-os-x-cli.zip ziphone-3.4g-mac-os-x-cli
+rm -rf ziphone-3.4g-mac-os-x-cli
