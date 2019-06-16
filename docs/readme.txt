@@ -2,21 +2,6 @@ ZiPhone version 3.4g (15th of June 2019)
 ===================================================================================
 -Fixed jailbreak failsafe.
 
--Added a new saftey check, ZiPhone will only continue jailbreaking if it 
-successfully mounted disks and performed operations correctly.
-
--(Not yet available in the linux version) Added ziphone -m, the WiFi MAC address 
-changer option. This option will allow you to spoof your WiFi MAC address on 
-1.0-2.0 beta 3 firmware. It works just like the change IMEI option, ./ziphone -m 
-<MAC address>. Replace <MAC address with a real MAC address you want to your device 
-to have, for example ./ziphone -m 10:10:10:10:10:10 will change your iPhone or iPod 
-Touch's MAC address to 10:10:10:10:10:10. 
-
--(Not yet availble in the linux version) Added ziphone -r, the WiFi MAC address 
-reset option. If you change your MAC address and want to revert it back to the 
-original hardware MAC address, use this option.
-
-
 ZiPhone version 3.4f (12th of June 2019)
 ===================================================================================
 -Fixed an issue where if you attempted to downgrade bootloader/unlock an iPod Touch  
@@ -28,7 +13,7 @@ successfully mounted disks and performed operations correctly.
 -(Not yet available in the linux version) Added ziphone -m, the WiFi MAC address 
 changer option. This option will allow you to spoof your WiFi MAC address on 
 1.0-2.0 beta 3 firmware. It works just like the change IMEI option, ./ziphone -m 
-<MAC address>. Replace <MAC address with a real MAC address you want to your device 
+<MAC address>. Replace <MAC address> with a real MAC address you want to your device 
 to have, for example ./ziphone -m 10:10:10:10:10:10 will change your iPhone or iPod 
 Touch's MAC address to 10:10:10:10:10:10. 
 
