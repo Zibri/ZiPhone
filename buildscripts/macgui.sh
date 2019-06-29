@@ -2,7 +2,7 @@
 
 echo "Building ZiPhone Mac OS X CLI..."
 cd ../
-rm -rf ZiPhone ziphone-3.4g-mac-os-x-gui.zip ziphone-3.4g-mac-os-x-gui
+rm -rf ZiPhone ziphone-3.5-mac-os-x-gui.zip ziphone-3.5-mac-os-x-gui
 mkdir -p ZiPhone
 cd ZiPhone
 mkdir ZiPhone
@@ -36,8 +36,8 @@ xcodebuild
 rm -rf ConsoleResources
 rm -rf build
 rm -rf Base.lproj
-tar -xvf ZiPhoneOSX-3.4g.tbz
-rm ZiPhoneOSX-3.4g.tbz
+tar -xvf ZiPhoneOSX-3.5.tbz
+rm ZiPhoneOSX-3.5.tbz
 cp -r ZiPhoneOSX.app ../ZiPhoneOSX.app
 rm -r ZiPhoneOSX.app
 cd ../
@@ -57,6 +57,6 @@ cp docs/run.txt ZiPhone/docs/run.txt
 cp docs/restore.txt ZiPhone/docs/restore.txt
 cp -r ZiPhoneOSX.app ZiPhone/ZiPhoneOSX.app
 rm -r ZiPhoneOSX.app
-mv ZiPhone ziphone-3.4g-mac-os-x-gui
-zip -r ziphone-3.4g-mac-os-x-gui.zip ziphone-3.4g-mac-os-x-gui
-rm -rf ziphone-3.4g-mac-os-x-gui
+mv ZiPhone ziphone-3.5-mac-os-x-gui
+zip -r ziphone-3.5-mac-os-x-gui.zip ziphone-3.5-mac-os-x-gui
+rm -rf ziphone-3.5-mac-os-x-gui

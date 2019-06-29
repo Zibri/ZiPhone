@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	cout << "ZZZZZZZZZZZZ              ZZZZZZZZZZZZ" << endl; 
 	cout << "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" << endl << endl;
 
-        cout << "ZiPhone v3.4g by Zibri. https://ziphone.zibri.org" << endl;
+        cout << "ZiPhone v3.5 by Zibri. https://ziphone.zibri.org" << endl;
         cout << "Source code available at: http://lexploit.com" << endl  << endl;
 
 	if(argc < 2) {
@@ -47,8 +47,8 @@ int main(int argc, char *argv[])
   		cout << endl;
 		cout << "       -b: Downgrade iPhone bootloader 4.6 to 3.9 and unlock 1.1.3-1.1.4." << endl;
         cout << "       -u: Unlock iPhone 1.1.2 BL4.6 or 1.1.3-1.1.4 BL4.6 and BL3.9." << endl;
-		cout << "       -a: Activate 1.0-1.1.5 and 2.0 beta 2-3." << endl;
-		cout << "       -j: Jailbreak iPhone/iPod Touch 1.0-1.1.5 and 2.0 beta 2-3." << endl;
+		cout << "       -a: Activate 1.0-1.1.5 or 2.0 beta 2-3." << endl;
+		cout << "       -j: Jailbreak iPhone/iPod Touch 1.0-1.1.5 or 2.0 beta 2-3." << endl;
 		cout << "       -e: Downgrade iPhone bootloader to 3.9, erase baseband, and enter Recovery (for a perfect restore)." << endl;
   		cout << "       -D: Enter DFU Mode on 1.0-1.1.5 (to restore deeply)." << endl;
   		cout << "       -N: Exit Recovery Mode (normal boot)." << endl;  

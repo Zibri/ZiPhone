@@ -1,6 +1,6 @@
 Compatible Windows versions: Windows XP SP2 32 bit-Windows 10 32 bit. 
 
-Compatible Mac OS X versions: Mac OS X 10.4.10 Tiger-Mac OS X 10.8.5 Mountain Lion. Untested on newer versions.
+Compatible Mac OS X versions: Mac OS X 10.4.10 Tiger-Mac OS X 10.9.5 Mavericks. Untested on newer versions.
 
 Compatible Linux versions: All x86/x86_64 distributions with Lib-usb version 1.0 or newer installed.
 

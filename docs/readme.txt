@@ -1,6 +1,14 @@
-ZiPhone version 3.4g (15th of June 2019)
+ZiPhone version 3.5 (29th of June 2019)
 ===================================================================================
--Fixed jailbreak failsafe.
+-The iPhone is now 12 years old. This new version of ZiPhone celebrates by 
+becoming the first jailbreak ever for firmware 2.0 beta 2 and 2.0 beta 3 that
+installs a package manager. The PXL project has been revived, and is now installed
+when using the jailbreak option on firmware 1.0-1.1.5 and 2.0 beta 2-3. iBrickr on 
+Windows and Breezy on Mac work on the above firmwares right after using ziphone -j,
+however the old PXL packages compiled for firmware 1.0-1.1.5 will not run on 2.0
+beta 2-3 (although they do install still). Only install PXL packages specifically
+made for 2.0 beta 2-2.0 beta 3 on 2.0 beta 2-2.0 beta 3, and only install PXL 
+packages specifically made for 1.0-1.1.5 on 1.0-1.1.5.
 
 ZiPhone version 3.4f (12th of June 2019)
 ===================================================================================

@@ -61,7 +61,7 @@ char victor[128]="victor.dat";
 
 char dfudat[128]="dfu.dat";
 						   
-unsigned char rdmd5[16]= { 0xd4,0x07,0xeb,0x07,0xec,0xc1,0xc5,0xa8,0x98,0xaa,0xcc,0xad,0xed,0xb6,0xff,0xff  };
+unsigned char rdmd5[16]= { 0xfe,0x8f,0x05,0x9b,0x28,0x94,0xa8,0xd0,0x30,0xb0,0x73,0xa7,0xe4,0x6b,0xdc,0xf5 };
 unsigned char dfumd5[16]= { 0x3f,0xf3,0xc0,0xb3,0x2d,0xfa,0xd6,0x9a,0xd6,0x22,0x2a,0x59,0x9d,0x88,0x2f,0x20 };
 unsigned char igormd5[16]= { 0xea,0x61,0xa1,0x57,0xa8,0x3d,0xde,0x9e,0x45,0xde,0x89,0x99,0xdd,0xbb,0x8e,0x93 };
 unsigned char victormd5[16]= { 0x0b,0x75,0x44,0x1c,0x47,0x08,0x3a,0x48,0xcb,0x18,0x39,0xc0,0x0a,0x94,0x55,0xd7 };
@@ -467,7 +467,7 @@ void Banner() {
   cout << "  ZZZZZZZZZZZ                 ZZZZZZZZ" << endl;
   cout << "ZZZZZZZZZZZZ              ZZZZZZZZZZZZ" << endl; 
   cout << "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" << endl << endl;
-  cout << "ZiPhone v3.4g by Zibri. https://ziphone.zibri.org" << endl;
+  cout << "ZiPhone v3.5 by Zibri. https://ziphone.zibri.org" << endl;
   cout << "Source code available at: http://lexploit.com" << endl;
   cout << endl;
 }
@@ -511,11 +511,11 @@ void UsageAdvanced() {
   cout << endl;
   cout << "       -b: Downgrade iPhone bootloader 4.6 to 3.9 and unlock 1.1.3-1.1.4." << endl;
   cout << "       -u: Unlock iPhone 1.1.2 BL4.6 or 1.1.3-1.1.4 BL4.6 and BL3.9." << endl;
-  cout << "       -a: Activate 1.0-1.1.5 and 2.0 beta 2-3." << endl;
-  cout << "       -j: Jailbreak iPhone/iPod Touch 1.0-1.1.5 and 2.0 beta 2-3." << endl;
+  cout << "       -a: Activate 1.0-1.1.5 or 2.0 beta 2-3." << endl;
+  cout << "       -j: Jailbreak iPhone/iPod Touch 1.0-1.1.5 or 2.0 beta 2-3." << endl;
   cout << "       -i: Change imei." << endl;
-  cout << "       -m: Change wifi MAC address." << endl;
-  cout << "       -r: Reset wifi MAC address to default." << endl;
+  cout << "       -m: Change WiFi MAC address." << endl;
+  cout << "       -r: Reset WiFi MAC address to default." << endl;
   cout << "       -e: Downgrade iPhone bootloader to 3.9, erase baseband, and enter Recovery (for a perfect restore)." << endl;
   cout << "       -D: Enter DFU Mode.(to restore deeply)." << endl;
   cout << "       -R: Enter Recovery Mode. (no real need now)." << endl;
