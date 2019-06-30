@@ -1,9 +1,14 @@
+ZiPhone version 3.5a (30th of June 2019)
+===================================================================================
+-Updated to the latest PXL version.
+-Added PXL support for 1.0-1.1.5 firmware jailbreak.
+
 ZiPhone version 3.5 (29th of June 2019)
 ===================================================================================
 -The iPhone is now 12 years old. This new version of ZiPhone celebrates by 
 becoming the first jailbreak ever for firmware 2.0 beta 2 and 2.0 beta 3 that
 installs a package manager. The PXL project has been revived, and is now installed
-when using the jailbreak option on firmware 1.0-1.1.5 and 2.0 beta 2-3. iBrickr on 
+when using the jailbreak option on firmware 2.0 beta 2-3. iBrickr on 
 Windows and Breezy on Mac work on the above firmwares right after using ziphone -j,
 however the old PXL packages compiled for firmware 1.0-1.1.5 will not run on 2.0
 beta 2-3 (although they do install still). Only install PXL packages specifically
@@ -301,3 +306,7 @@ ziphone -D
 
 then restore to firmware 1.0.1 or newer. If your on 2.0 beta or newer, ziphone -D 
 won't work. You need to enter DFU mode manually, or use Recovery Mode.
+
+All copyright on the enclosed source code (EXCLUDING ZiPhone itself) is
+hereby released.  The source for the MacOS GUI wrapper is placed into the
+public domain.

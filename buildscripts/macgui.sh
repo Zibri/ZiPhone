@@ -2,7 +2,7 @@
 
 echo "Building ZiPhone Mac OS X CLI..."
 cd ../
-rm -rf ZiPhone ziphone-3.5-mac-os-x-gui.zip ziphone-3.5-mac-os-x-gui
+rm -rf ZiPhone ziphone-3.5a-mac-os-x-gui.zip ziphone-3.5a-mac-os-x-gui
 mkdir -p ZiPhone
 cd ZiPhone
 mkdir ZiPhone
@@ -25,7 +25,8 @@ cp zibri.dat ZiPhone/
 cp igor.dat  ZiPhone/
 cp victor.dat  ZiPhone/
 cp -r docs ZiPhone/docs
-cp -r "ziphone-win-mac-os-x-cli/" ZiPhone/
+cp docs/readme.txt ziphone-mac-os-x-gui/readme.txt
+cp -r ziphone-win-mac-os-x-cli/ ZiPhone/
 echo "Building ZiPhone Mac OS X GUI..."
 cd "ziphone-mac-os-x-gui"
 rm -rf build 
@@ -36,8 +37,8 @@ xcodebuild
 rm -rf ConsoleResources
 rm -rf build
 rm -rf Base.lproj
-tar -xvf ZiPhoneOSX-3.5.tbz
-rm ZiPhoneOSX-3.5.tbz
+tar -xvf ZiPhoneOSX-3.5a.tbz
+rm ZiPhoneOSX-3.5a.tbz
 cp -r ZiPhoneOSX.app ../ZiPhoneOSX.app
 rm -r ZiPhoneOSX.app
 cd ../
@@ -47,16 +48,15 @@ cp zibri.dat ZiPhoneOSX.app/Contents/Resources/zibri.dat
 cp igor.dat ZiPhoneOSX.app/Contents/Resources/igor.dat
 cp victor.dat ZiPhoneOSX.app/Contents/Resources/victor.dat
 cp ziphone-mac-os-x-gui/readme.txt ZiPhoneOSX.app/Contents/Resources/readme.txt
+rm readme.txt
 cp docs/troubleshooting.txt ZiPhoneOSX.app/Contents/Resources/troubleshooting.txt
 rm -rf ZiPhone
 mkdir ZiPhone
 mkdir ZiPhone/docs
 cp docs/license.txt ZiPhone/docs/license.txt
 cp docs/plugin-howto.txt ZiPhone/docs/plugin-howto.txt
-cp docs/run.txt ZiPhone/docs/run.txt
-cp docs/restore.txt ZiPhone/docs/restore.txt
 cp -r ZiPhoneOSX.app ZiPhone/ZiPhoneOSX.app
 rm -r ZiPhoneOSX.app
-mv ZiPhone ziphone-3.5-mac-os-x-gui
-zip -r ziphone-3.5-mac-os-x-gui.zip ziphone-3.5-mac-os-x-gui
-rm -rf ziphone-3.5-mac-os-x-gui
+mv ZiPhone ziphone-3.5a-mac-os-x-gui
+zip -r ziphone-3.5a-mac-os-x-gui.zip ziphone-3.5a-mac-os-x-gui
+rm -rf ziphone-3.5a-mac-os-x-gui

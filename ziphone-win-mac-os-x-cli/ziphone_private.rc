@@ -8,8 +8,8 @@
 // TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
 //
 1 VERSIONINFO
-FILEVERSION 3,5,0,0
-PRODUCTVERSION 3,5,0,0
+FILEVERSION 3,5,1,0
+PRODUCTVERSION 3,5,1,0
 FILETYPE VFT_APP
 {
   BLOCK "StringFileInfo"
@@ -17,14 +17,14 @@ FILETYPE VFT_APP
 		 BLOCK "040904E4"
 		 {
 			 VALUE "CompanyName", "ZiPhone http://lexploit.com/ziphone"
-			 VALUE "FileVersion", "3.5"
-			 VALUE "FileDescription", "ZiPhone v3.5"
+			 VALUE "FileVersion", "3.5a"
+			 VALUE "FileDescription", "ZiPhone v3.5a"
 			 VALUE "InternalName", "ZiPhone"
 			 VALUE "LegalCopyright", "Zibri https://zibri.ziphone.org"
 			 VALUE "LegalTrademarks", "https://zibri.ziphone.org"
 			 VALUE "OriginalFilename", "ziphone.exe"
 			 VALUE "ProductName", "ZiPhone"
-			 VALUE "ProductVersion", "3.5"
+			 VALUE "ProductVersion", "3.5a"
 		 }
 	 }
   BLOCK "VarFileInfo"
