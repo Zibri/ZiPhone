@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo "Building Linux GUI..."
+cd ../
+cd ziphone-linux-gui
+gcc zgui.c -o zgui $(pkg-config --cflags --libs gtk+-3.0)
 echo "Building Linux CLI..."
 cd ../
 rm -rf ZiPhone ziphone-3.5a-linux-cli.zip ziphone-3.5a-linux-cli
@@ -15,8 +19,9 @@ cp zibri.dat ZiPhone/ZiPhone/
 cp igor.dat  ZiPhone/ZiPhone/
 cp victor.dat  ZiPhone/ZiPhone/
 cp -r docs ZiPhone/docs
-mv ZiPhone ziphone-3.5a-linux-cli
-zip -r ziphone-3.5a-linux-cli.zip ziphone-3.5a-linux-cli
-rm -rf ziphone-3.5a-linux-cli
+cp ziphone-linux-gui/zgui ZiPhone/ZiPhone/
+mv ZiPhone ziphone-3.5a-linux-gui
+zip -r ziphone-3.5a-linux-gui.zip ziphone-3.5a-linux-gui
+rm -rf ziphone-3.5a-linux-gui
 
 
