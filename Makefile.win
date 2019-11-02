@@ -1,0 +1,27 @@
+#ZiPhone Windows 98 SE, Windows 2000, Windows ME, Windows XP 32 bit make for use with Dev-Cpp 4.9.9.2
+#Before executing make -f Makefile.winleg run PATH=C:\Dev-Cpp\bin;C:\Dev-Cpp\lib
+
+CC=g++
+
+CFLAGS=-g
+INC=-I$(SRCDIR) -I"C:\Program Files\LibUSB-Win32\include"
+
+SRCDIR=src
+OBJDIR=build
+
+LDFLAGS=-L"C:\Program Files\LibUSB-Win32\lib\gcc" -lusb
+
+OBJS=ziphone.o
+LIBOBJS=libibooter.o
+
+all: ziphone 
+
+VPATH=$(SRCDIR)
+
+.cpp.o:
+	$(CC) $(CFLAGS) -c $< $(INC) -o $@
+
+
+ziphone: $(LIBOBJS) $(OBJS) 
+	$(CC) $(LDFLAGS) $^ $(LDFLAGS) -o $@; del *.o
+

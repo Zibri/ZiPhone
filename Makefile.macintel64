@@ -1,0 +1,34 @@
+#ZiPhone Mac Intel x86_64 make 
+
+CC=g++
+
+CFLAGS=-g -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.4
+INC=-I$(SRCDIR) -I/usr/local/include
+
+SRCDIR=src
+OBJDIR=build
+
+LDFLAGS=-lusb
+
+OBJS=ziphone.o
+LIBOBJS=libibooter.o
+
+all: setup ziphone bzip2
+
+VPATH=$(SRCDIR)
+
+.cpp.o:
+	$(CC) $(CFLAGS) -c $< $(INC) -o $(OBJDIR)/$@
+
+
+ziphone: $(LIBOBJS) $(OBJS) 
+	cd $(OBJDIR); $(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@; rm -rf *.o
+
+setup: clean
+	mkdir -p $(OBJDIR); cp *dat $(OBJDIR)/; cp -r docs $(OBJDIR)/; 
+
+bzip2:
+	mv $(OBJDIR) ziphone-3.6-cli-mac; tar -jcvf ziphone-3.6-cli-mac-intel-64.tar.bz2 ziphone-3.6-cli-mac
+
+clean:
+	 rm -rf $(OBJDIR) ziphone-3.6-cli-mac ziphone-3.6-cli-mac-intel-64.tar.bz2

@@ -1,0 +1,81 @@
+Build ZiPhone Mac
+
+--Requirements--
+-Mac OS X 10.4 or newer (10.5 is required for the Build Everything method and for building the GUI app).
+-MacOSX10.4u.sdk in /Developer.
+-Xcode 2.5 or newer.
+-System Integrity Protection turned off (Mac OS 10.11 and newer only).
+
+--Methods--
+
+--Build Everything--
+
+./macrelease.sh
+
+To build ZiPhone CLI and GUI in the following files:
+
+ziphone-3.6-cli-mac-intel-32.tar.bz2ziphone-3.6-cli-mac-intel-64.tar.bz2ziphone-3.6-cli-mac-ppc.tar.bz2ziphone-3.6-gui-mac-intel-32.tar.bz2ziphone-3.6-gui-mac-intel-64.tar.bz2ziphone-3.6-gui-mac-ppc.tar.bz2
+
+--Build Individually--
+ 
+Compile pkg-config from source code and install it into /usr/local:
+
+If compiling these for 32 bit Intel machines, use:
+./configure  --with-internal-glib CFLAGS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mmacosx-version-min=10.4"
+
+If compiling these for Intel 64 bit machines, use:
+./configure --with-internal-glib CFLAGS="-isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -arch x86_64"
+
+If compiling for PPC machines (you can use an Intel for this, just have Rosetta installed), use:
+./configure --with-internal-glib CFLAGS="-arch ppc -isysroot /Developer/SDKs/MacOSX10.3.9.sdk -mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mmacosx-version-min=10.4"
+
+Then just:
+make
+sudo make install
+
+Compile libusb-1.0 from source:
+
+If compiling these for 32 bit Intel machines, use:
+./configure  CFLAGS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mmacosx-version-min=10.4"
+
+If compiling these for 64 bit Intel machines, use:
+./configure CFLAGS="-isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -arch x86_64"
+
+If compiling for PPC machines (you can use an Intel for this, just have Rosetta installed), use:
+./configure CFLAGS="-arch ppc -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mmacosx-version-min=10.4"
+
+Then just:
+make
+sudo make install
+
+
+Compile libusb-0.1-compat from source:
+
+If compiling these for 32 bit Intel machines, use:
+./configure  CFLAGS="-arch i386  -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mmacosx-version-min=10.4"
+
+If compiling these for 64 bit Intel machines, use:
+./configure  CFLAGS="-isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -arch x86_64"
+
+If compiling for PPC machines (you can use an Intel for this, just have Rosetta installed), use:
+./configure  CFLAGS="-arch ppc -isysroot /Developer/SDKs/MacOSX10.4u.sdk -mmacosx-version-min=10.4"
+
+Then just:
+
+make
+sudo make install
+
+Now you have all the required libraries on your Mac to compile ZiPhone. Cd into the source directory and execute:
+
+If compiling these for 32 bit Intel machines, use:
+make -f Makefile.macintel32 
+
+If compiling these for 64 bit Intel machines, use:
+make -f Makefile.macintel64
+
+If compiling for PPC machines, use:
+make -f Makefile.macppc 
+
+To build the Mac GUI, you need Mac OS X 10.5 or newer. Then build one of the CLI's and execute:
+
+./macgui.sh

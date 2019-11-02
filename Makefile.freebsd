@@ -1,0 +1,34 @@
+#ZiPhone FreeBSD make 
+
+CC=g++8
+
+CFLAGS=-g
+INC=-I$(SRCDIR)
+
+SRCDIR=src
+OBJDIR=build
+
+LDFLAGS=-lusb
+
+OBJS=ziphone.o
+LIBOBJS=libibooter.o
+
+all: setup ziphone bzip2
+
+VPATH=$(SRCDIR)
+
+.cpp.o:
+	$(CC) $(CFLAGS) -c $< $(INC) -o $(OBJDIR)/$@
+
+
+ziphone: $(LIBOBJS) $(OBJS) 
+	cd $(OBJDIR); $(CC) $(LDFLAGS) $^ -o $@; rm -rf *.o
+
+setup: clean
+	mkdir -p $(OBJDIR); cp *dat $(OBJDIR)/; cp -r docs $(OBJDIR)/
+
+bzip2:
+	mv $(OBJDIR) ziphone-3.6-cli-freebsd-32; tar -jcvf ziphone-3.6-cli-freebsd-32.tar.bz2 ziphone-3.6-cli-freebsd-32
+
+clean:
+	 rm -rf $(OBJDIR)

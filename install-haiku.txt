@@ -1,0 +1,9 @@
+Build ZiPhone CLI on Haiku 
+
+-Tested on Haiku R1/beta 1 32 bit
+
+You need to install libusb_compat_x86 and libusb_x86 from the HaikuDepot.
+
+Then cd into the directory of the extracted source and execute the command:
+
+make -f Makefile.haiku

@@ -1,0 +1,246 @@
+﻿/**
+ * GUI Localization for MainMenu.nib.
+ *
+ * Many of the strings in this file are stock OS X menu items.  Please localize as closely to
+ * your own Mac OS install if possible.
+ *
+ * Language: English (US)
+ * Maintainer: pendor
+ * Last Update: 29-Feb-2008
+ * New Maintainer: lex
+ * Last Update: 13-May-2019 :)
+ */
+
+/**
+ * Standard menu stuff follows.
+ */
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "5"; */
+"5.title" = "Bring All to Front";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "19"; */
+"19.title" = "Window";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "23"; */
+"23.title" = "Minimize";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "24"; */
+"24.title" = "Window";
+
+/* Class = "NSMenu"; title = "AMainMenu"; ObjectID = "29"; */
+"29.title" = "AMainMenu";
+
+/* Class = "NSMenuItem"; title = "ZiPhone"; ObjectID = "56"; */
+"56.title" = "ZiPhone";
+
+/* Class = "NSMenu"; title = "ZiPhone"; ObjectID = "57"; */
+"57.title" = "ZiPhone";
+
+/* Class = "NSMenuItem"; title = "About ZiPhone"; ObjectID = "58"; */
+"58.title" = "About ZiPhone";
+
+/* Class = "NSMenuItem"; title = "Close"; ObjectID = "73"; */
+"73.title" = "Close";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "81"; */
+"81.title" = "File";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "83"; */
+"83.title" = "File";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "103"; */
+"103.title" = "Help";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "106"; */
+"106.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "ZiPhone Help"; ObjectID = "111"; */
+"111.title" = "ZiPhone Help";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "130"; */
+"130.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "131"; */
+"131.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Hide ZiPhone"; ObjectID = "134"; */
+"134.title" = "Hide ZiPhone";
+
+/* Class = "NSMenuItem"; title = "Quit ZiPhone"; ObjectID = "136"; */
+"136.title" = "Quit ZiPhone";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "145"; */
+"145.title" = "Hide Others";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "150"; */
+"150.title" = "Show All";
+
+/* Class = "NSMenuItem"; title = "Stop Speaking"; ObjectID = "195"; */
+"195.title" = "Stop Speaking";
+
+/* Class = "NSMenuItem"; title = "Start Speaking"; ObjectID = "196"; */
+"196.title" = "Start Speaking";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "197"; */
+"197.title" = "Copy";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "198"; */
+"198.title" = "Select All";
+
+/* Class = "NSMenuItem"; title = "Cut"; ObjectID = "199"; */
+"199.title" = "Cut";
+
+/* Class = "NSMenu"; title = "Spelling and Grammar"; ObjectID = "200"; */
+"200.title" = "Spelling and Grammar";
+
+/* Class = "NSMenuItem"; title = "Check Spelling"; ObjectID = "201"; */
+"201.title" = "Check Spelling";
+
+/* Class = "NSMenuItem"; title = "Delete"; ObjectID = "202"; */
+"202.title" = "Delete";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "203"; */
+"203.title" = "Paste";
+
+/* Class = "NSMenuItem"; title = "Show Spelling…"; ObjectID = "204"; */
+"204.title" = "Show Spelling…";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "205"; */
+"205.title" = "Edit";
+
+/* Class = "NSMenuItem"; title = "Find Next"; ObjectID = "208"; */
+"208.title" = "Find Next";
+
+/* Class = "NSMenuItem"; title = "Find…"; ObjectID = "209"; */
+"209.title" = "Find…";
+
+/* Class = "NSMenuItem"; title = "Jump to Selection"; ObjectID = "210"; */
+"210.title" = "Jump to Selection";
+
+/* Class = "NSMenuItem"; title = "Speech"; ObjectID = "211"; */
+"211.title" = "Speech";
+
+/* Class = "NSMenu"; title = "Speech"; ObjectID = "212"; */
+"212.title" = "Speech";
+
+/* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "213"; */
+"213.title" = "Find Previous";
+
+/* Class = "NSMenuItem"; title = "Spelling and Grammar"; ObjectID = "216"; */
+"216.title" = "Spelling and Grammar";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "217"; */
+"217.title" = "Edit";
+
+/* Class = "NSMenuItem"; title = "Find"; ObjectID = "218"; */
+"218.title" = "Find";
+
+/* Class = "NSMenuItem"; title = "Check Spelling While Typing"; ObjectID = "219"; */
+"219.title" = "Check Spelling While Typing";
+
+/* Class = "NSMenu"; title = "Find"; ObjectID = "220"; */
+"220.title" = "Find";
+
+/* Class = "NSMenuItem"; title = "Use Selection for Find"; ObjectID = "221"; */
+"221.title" = "Use Selection for Find";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "239"; */
+"239.title" = "Zoom";
+
+/* Class = "NSMenuItem"; title = "Check Grammar With Spelling"; ObjectID = "346"; */
+"346.title" = "Check Grammar With Spelling";
+
+/* Class = "NSMenuItem"; title = "Substitutions"; ObjectID = "348"; */
+"348.title" = "Substitutions";
+
+/* Class = "NSMenu"; title = "Substitutions"; ObjectID = "349"; */
+"349.title" = "Substitutions";
+
+/* Class = "NSMenuItem"; title = "Smart Copy/Paste"; ObjectID = "350"; */
+"350.title" = "Smart Copy/Paste";
+
+/* Class = "NSMenuItem"; title = "Smart Quotes"; ObjectID = "351"; */
+"351.title" = "Smart Quotes";
+
+/* Class = "NSMenuItem"; title = "Smart Links"; ObjectID = "354"; */
+"354.title" = "Smart Links";
+
+/* Class = "NSWindow"; title = "ZiPhone - All in one jailbreak / unlocking tool for iPhone and iPod Touch"; ObjectID = "371"; */
+"371.title" = "ZiPhone - All in one jailbreak, unlock, and more!";
+
+/* Class = "NSButtonCell"; title = "Stop (kill ziphone)"; ObjectID = "379"; */
+"379.title" = "Stop (kill ziphone)";
+
+/* Class = "NSButtonCell"; title = "Help & Info"; ObjectID = "383"; */
+"383.title" = "Help & Info";
+
+/* Class = "NSBox"; title = "Progress Log"; ObjectID = "400"; */
+"400.title" = "Progress Log";
+
+/* Class = "NSWindow"; title = "About ZiPhone"; ObjectID = "442"; */
+"442.title" = "About ZiPhone";
+
+/* Class = "NSMenuItem"; title = "Run Reboot Test (-t)"; ObjecTID = "488"; */
+"488.title" = "Test boot verbosely (-v)";
+
+/* Class = "NSTabViewItem"; label = "One-Click Actions"; ObjectID = "493"; */
+"493.label" = "Simple";
+
+/* Class = "NSTabViewItem"; label = "Advanced"; ObjectID = "494"; */
+"494.label" = "Advanced";
+
+/* Class = "NSButtonCell"; title = "iErase BL 3.9 baseband"; ObjectID = "516"; */
+"516.title" = "Downgrade BL & erase";
+
+/* Class = "NSTextFieldCell"; placeholderString = "15-16 Digit IMEI #"; ObjectID = "517"; */
+"517.placeholderString" = "15-16 Digit IMEI #";
+
+/* Class = "NSButtonCell"; title = "Change phone's IMEI"; ObjectID = "518"; */
+"518.title" = "Change iPhone IMEI";
+
+/* Class = "NSButtonCell"; title = "Downgrade 4.6 BL to 3.9 & 
+Flash/unlock 4.03"; ObjectID = "537"; */
+"537.title" = "Downgrade 4.6 BL to 3.9 &
+unlock 1.1.3-1.1.4";
+
+/* Note to localizers: Feel free to take credit here for your work.  
+ * Just keep it short or it'll run off the edge of the About window. =)
+ */
+/* Class = "NSTextFieldCell"; title = "Credit for translator"; ObjectID = "556"; */
+"556.title" = "";
+
+/* Class = "NSTabViewItem"; label = "Readme"; ObjectID = "558"; */
+"558.label" = "Readme";
+
+/* Class = "NSTabViewItem"; label = "Troubleshooting"; ObjectID = "559"; */
+"559.label" = "Troubleshooting";
+
+/* Class = "NSButtonCell"; title = "Unlock phone for any carrier"; ObjectID = "573"; */
+"573.title" = "Unlock 1.1.2 (4.6) or 1.1.3-1.1.4";
+
+/* Class = "NSButtonCell"; title = "Activate iPhone"; ObjectID = "575"; */
+"575.title" = "Activate";
+
+/* Class = "NSButtonCell"; title = "Jailbreak (iPhone or iTouch)"; ObjectID = "582"; */
+"582.title" = "Jailbreak";
+
+/* Class = "NSMenuItem"; title = "Mode"; ObjectID = "664"; */
+"664.title" = "Mode";
+
+/* Class = "NSMenu"; title = "Mode"; ObjectID = "665"; */
+"665.title" = "Mode";
+
+/* Class = "NSMenuItem"; title = "Restart in DFU Mode"; ObjectID = "666"; */
+"666.title" = "Restart in DFU Mode (-D)";
+
+/* Class = "NSMenuItem"; title = "Restart in Normal Mode"; ObjectID = "667"; */
+"667.title" = "Restart in Normal Mode (-N)";
+
+/* Class = "NSButtonCell"; title = "Start Process"; ObjectID = "675"; */
+"675.title" = "Start Process";
+
+/* Class = "NSTextFieldCell"; title = "To be used for legitimate purposes only!"; ObjectID = "681"; */
+"681.title" = "To be used for legitimate purposes only!";
+
+/* Class = "NSTextFieldCell"; title = "ZiPhone development takes a significant amount of time.  Please donate to support continued improvements."; ObjectID = "687"; */
+"687.title" = "ZiPhone development takes a significant amount of time.  Please donate to support continued improvements.";

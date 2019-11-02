@@ -1,0 +1,9 @@
+Build ZiPhone CLI on FreeBSD
+
+Make sure pkg is installed. Then execute the command "pkg install gmake gcc".
+
+Then cd into the ziphone-cli directory of the extracted source and execute the command:
+
+gmake -f Makefile.freebsd
+
+If you use make (bsd make) and not gmake this will not build! The makefile uses g++8, you may have to change the CC= value for other gcc versions.

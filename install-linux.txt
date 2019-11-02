@@ -1,0 +1,13 @@
+Build ZiPhone CLI on FreeBSD
+
+Execute the command:
+
+apt-get install build-essential libusb-dev bzip2
+
+Then cd into the directory of the extracted source and execute the command:
+
+make -f Makefile.freebsd
+
+To build the GUI, make sure the package gnome-devel is installed, build the CLI and then execute the command:
+
+./linuxgui.sh

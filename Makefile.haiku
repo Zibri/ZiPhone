@@ -1,0 +1,30 @@
+#ZiPhone Haiku Make
+
+CC=/bin/x86/g++
+
+CFLAGS=-g 
+INC=-I$(SRCDIR) -I/system/non-packaged/include
+
+SRCDIR=src
+OBJDIR=build
+LDFLAGS=-L/system/lib/x86 /system/lib/x86/libusb-0.1.so.4 
+OBJS=ziphone.o
+LIBOBJS=libibooter.o
+
+all: setup ziphone bzip2
+
+VPATH=$(SRCDIR)
+
+.cpp.o:
+	$(CC) $(CFLAGS) -c $< $(INC) -o $(OBJDIR)/$@
+
+ziphone: $(LIBOBJS) $(OBJS) 
+	cd $(OBJDIR); $(CC) $(LDFLAGS) $^ -o $@; rm -rf *.o
+
+setup: clean
+	mkdir -p $(OBJDIR); cp *dat $(OBJDIR)/; cp -r docs $(OBJDIR)/
+bzip2:
+	mv $(OBJDIR) ziphone-3.6-cli-haiku-32; tar -jcvf ziphone-3.6-cli-haiku-32.tar.bz2 ziphone-3.6-cli-haiku-32
+
+clean:
+	 rm -rf $(OBJDIR) ziphone-3.6-cli-haiku-32.tar.bz2 ziphone-3.6-cli-haiku-32

@@ -1,0 +1,13 @@
+Build ZiPhone CLI on Windows
+
+Make sure libusb-win32 filter-bin version 0.1.2.2 is installed when targeting Windows 98 SE, Windows 2000, Windows ME, and Windows XP 32 bit.
+
+For Windows XP 64 bit, Windows Vista 32 bit/64 bit, Windows 7 32 bit/64 bit, Windows 8.x 32 bit/64 bit, and Windows 10 32 bit/64 bit install libusb-win32 devel-filter version 1.2.6.0.
+
+Then you need to install Dev-Cpp 4.9.9.2. Yea, I use the ancient Dev-Cpp original version. It works on Windows 98 SE, Windows ME, Windows 2000, and Windows XP 32 bit only. Vista broke it, Don't bother trying to use that Dev-Cpp on anything newer.
+
+Then cd into the directory of the extracted source and execute the commands:
+
+PATH=C:\Dev-Cpp\bin;C:\Dev-Cpp\lib
+make -f Makefile.win
+

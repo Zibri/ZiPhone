@@ -1,3 +1,9 @@
+ZiPhone version 3.6 (12th of September 2019)
+===================================================================================
+-Complete rewrite using libusb for many platforms.
+-Added ziphone -sc (send command). Send your own Recovery Mode commands.
+
+
 ZiPhone version 3.5a (30th of June 2019)
 ===================================================================================
 -Updated to the latest PXL version.
