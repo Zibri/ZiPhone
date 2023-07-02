@@ -22,13 +22,13 @@ VPATH=$(SRCDIR)
 
 
 ziphone: $(LIBOBJS) $(OBJS) 
-	cd $(OBJDIR); $(CC) $(LDFLAGS) $^ -o $@; rm -rf *.o
+	cd $(OBJDIR); $(CC) $^ $(LDFLAGS) -o $@; rm -rf *.o
 
 setup: clean
 	mkdir -p $(OBJDIR); cp *dat $(OBJDIR)/; cp -r docs $(OBJDIR)/
 
 bzip2:
-	mv $(OBJDIR) ziphone-3.6-cli-linux; tar -jcvf ziphone-3.6-freebsd-cli.tar.bz2 ziphone-3.6-linux-cli
+	mv $(OBJDIR) ziphone-3.6-linux-cli; tar -jcvf ziphone-3.6-linux-cli.tar.bz2 ziphone-3.6-linux-cli
 
 
 clean:
