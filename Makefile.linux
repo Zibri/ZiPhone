@@ -22,7 +22,7 @@ VPATH=$(SRCDIR)
 
 
 ziphone: $(LIBOBJS) $(OBJS) 
-	cd $(OBJDIR); $(CC) $(LDFLAGS) $^ -o $@; rm -rf *.o
+	cd $(OBJDIR); $(CC) $^ $(LDFLAGS) -o $@; rm -rf *.o
 
 setup: clean
 	mkdir -p $(OBJDIR); cp *dat $(OBJDIR)/; cp -r docs $(OBJDIR)/
